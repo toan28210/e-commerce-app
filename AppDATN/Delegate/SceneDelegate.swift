@@ -33,18 +33,20 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             user.tabBarItem = UITabBarItem(title: "", image: UIImage(named: "img-about-image"), tag: 2)
             tabbarController.viewControllers = [navigation, farNavi, userNavi]
             tabbarController.tabBar.backgroundColor = .white
-            let login = LoginViewController()
             let userId = UserDefaults.standard.value(forKey: "userid") ?? ""
             let checkUserId = "\(userId)"
-    //        if checkUserId == "" {
-    //            startApp = login
-    //        } else {
-    //            startApp = tabbarController
-    //        }
-            startApp = login
+            if checkUserId == "" {
+                let login = LoginViewController()
+                let navigation = UINavigationController(rootViewController: login)
+                startApp = navigation
+            } else {
+                startApp = tabbarController
+            }
         } else {
             //Onboard
-            startApp = StartViewController()
+            let onboard = StartViewController()
+            let navigation = UINavigationController(rootViewController: onboard)
+            startApp = navigation
         }
         setupButtonBackNavigation()
         window?.rootViewController = startApp
