@@ -236,7 +236,7 @@
 		2F0C0C00294881F600A0B235 /* Customs */ = {
 			isa = PBXGroup;
 			children = (
-				2FBE790D29642B5B000E6B62 /* Extendsion */,
+				2FBE790D29642B5B000E6B62 /* Extension */,
 				2F493B442941E3B800D169D5 /* CustomTextField.swift */,
 				2F44465C2949A1700064508C /* ProductButtonCart.xib */,
 				2F44465E2949A2200064508C /* ProductButtonCart.swift */,
@@ -354,13 +354,13 @@
 			path = "CustomHeader&Footer";
 			sourceTree = "<group>";
 		};
-		2F6CE7E729586105008F855A /* Oders */ = {
+		2F6CE7E729586105008F855A /* Orders */ = {
 			isa = PBXGroup;
 			children = (
 				2F6CE7E829586142008F855A /* MyOrderViewController.swift */,
 				2F6CE7E929586142008F855A /* MyOrderViewController.xib */,
 			);
-			path = Oders;
+			path = Orders;
 			sourceTree = "<group>";
 		};
 		2F7FF12B293DCF3000775711 = {
@@ -410,12 +410,12 @@
 		2F7FF14E293DCF9B00775711 /* Pages */ = {
 			isa = PBXGroup;
 			children = (
-				2FBE791029643698000E6B62 /* Fagori */,
+				2FBE791029643698000E6B62 /* Fagorites */,
 				2FBE790E29642B7E000E6B62 /* Product */,
 				2FBE790B29642AFD000E6B62 /* Welcome */,
 				2FBE790629642A98000E6B62 /* Login */,
 				2FBE7903296429EF000E6B62 /* Onboarding */,
-				2F6CE7E729586105008F855A /* Oders */,
+				2F6CE7E729586105008F855A /* Orders */,
 				2FCBD52E29572044002E5D02 /* Reviews */,
 				2FBE78FB29642921000E6B62 /* Home */,
 				2FBE78FC2964292E000E6B62 /* Cart */,
@@ -575,13 +575,13 @@
 			path = CartCell;
 			sourceTree = "<group>";
 		};
-		2FBE790D29642B5B000E6B62 /* Extendsion */ = {
+		2FBE790D29642B5B000E6B62 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
 				2F46CA2F29470ABB00F514C1 /* UIView+Extension.swift */,
 				2F2B39CE29644D6D00C96FFB /* UserDefault+Extension.swift */,
 			);
-			path = Extendsion;
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		2FBE790E29642B7E000E6B62 /* Product */ = {
@@ -601,13 +601,13 @@
 			path = Validation;
 			sourceTree = "<group>";
 		};
-		2FBE791029643698000E6B62 /* Fagori */ = {
+		2FBE791029643698000E6B62 /* Fagorites */ = {
 			isa = PBXGroup;
 			children = (
 				2FBE7911296436ED000E6B62 /* FagoritesViewController.swift */,
 				2FBE7912296436ED000E6B62 /* FagoritesViewController.xib */,
 			);
-			path = Fagori;
+			path = Fagorites;
 			sourceTree = "<group>";
 		};
 		2FBEB79F295593480080EB42 /* SearchCells */ = {
