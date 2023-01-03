@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProductButtonCart" customModule="AppDATN" customModuleProvider="target">
+            <connections>
+                <outlet property="contentView" destination="hBq-Mm-6xC" id="EHm-tq-j5k"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="hBq-Mm-6xC">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HLL-Ir-FT6">
+                    <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cA7-3F-eLe">
+                            <rect key="frame" x="0.0" y="0.0" width="393" height="759"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain"/>
+                        </button>
+                        <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="RMM-cE-gRA">
+                            <rect key="frame" x="152.33333333333334" y="371.66666666666669" width="88.666666666666657" height="16"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img-bag-image" translatesAutoresizingMaskIntoConstraints="NO" id="Gel-sr-3hf">
+                                    <rect key="frame" x="0.0" y="0.0" width="16" height="16"/>
+                                    <color key="tintColor" systemColor="systemGreenColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="16" id="UKD-kP-kAD"/>
+                                        <constraint firstAttribute="height" constant="16" id="vYt-o1-wsW"/>
+                                    </constraints>
+                                </imageView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add to cart" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QYh-61-vDZ">
+                                    <rect key="frame" x="24" y="0.66666666666662877" width="64.666666666666671" height="14.333333333333334"/>
+                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="RMM-cE-gRA" firstAttribute="centerY" secondItem="HLL-Ir-FT6" secondAttribute="centerY" id="CWJ-fP-YoA"/>
+                        <constraint firstAttribute="trailing" secondItem="cA7-3F-eLe" secondAttribute="trailing" id="FrW-DN-fbi"/>
+                        <constraint firstAttribute="bottom" secondItem="cA7-3F-eLe" secondAttribute="bottom" id="MCc-m0-OWV"/>
+                        <constraint firstItem="cA7-3F-eLe" firstAttribute="leading" secondItem="HLL-Ir-FT6" secondAttribute="leading" id="cY9-VS-6Aq"/>
+                        <constraint firstItem="RMM-cE-gRA" firstAttribute="centerX" secondItem="HLL-Ir-FT6" secondAttribute="centerX" id="egu-Li-Xw5"/>
+                        <constraint firstItem="cA7-3F-eLe" firstAttribute="top" secondItem="HLL-Ir-FT6" secondAttribute="top" id="yPu-mm-DVf"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="It8-rX-o8B"/>
+            <constraints>
+                <constraint firstItem="HLL-Ir-FT6" firstAttribute="top" secondItem="It8-rX-o8B" secondAttribute="top" id="1RI-TX-SKK"/>
+                <constraint firstItem="It8-rX-o8B" firstAttribute="bottom" secondItem="HLL-Ir-FT6" secondAttribute="bottom" id="2RK-sX-1mP"/>
+                <constraint firstItem="It8-rX-o8B" firstAttribute="trailing" secondItem="HLL-Ir-FT6" secondAttribute="trailing" id="JUm-dB-SSs"/>
+                <constraint firstItem="HLL-Ir-FT6" firstAttribute="leading" secondItem="It8-rX-o8B" secondAttribute="leading" id="Nei-sZ-AlF"/>
+            </constraints>
+            <point key="canvasLocation" x="274" y="6"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="img-bag-image" width="13" height="15"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

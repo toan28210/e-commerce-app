@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AboutViewController" customModule="AppDATN" customModuleProvider="target">
+            <connections>
+                <outlet property="currentPass" destination="aiO-hH-V33" id="gdy-cE-de8"/>
+                <outlet property="emailTxt" destination="XCX-9i-cG3" id="L1y-Il-f6i"/>
+                <outlet property="newPassTxt" destination="VX7-Ue-NSH" id="Zn9-X7-e3i"/>
+                <outlet property="phoneNumberTxt" destination="UWL-ki-hkt" id="HBg-vd-n0g"/>
+                <outlet property="userName" destination="r6C-6R-qAM" id="e7x-dN-rw9"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yVK-bY-NRS">
+                    <rect key="frame" x="16" y="91" width="361" height="711"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Personal Details" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="teO-Zr-mce">
+                            <rect key="frame" x="0.0" y="0.0" width="144.66666666666666" height="24"/>
+                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="r6C-6R-qAM" customClass="CustomTextField" customModule="AppDATN" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="40" width="361" height="60"/>
+                            <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="60" id="HCK-IF-4vz"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="leftPadding">
+                                    <real key="value" value="16"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="image" keyPath="leftImage" value="img-about-image"/>
+                            </userDefinedRuntimeAttributes>
+                        </textField>
+                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XCX-9i-cG3" customClass="CustomTextField" customModule="AppDATN" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="108" width="361" height="60"/>
+                            <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="60" id="vwL-DV-r3b"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="leftPadding">
+                                    <real key="value" value="16"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="image" keyPath="leftImage" value="img-mail-image"/>
+                            </userDefinedRuntimeAttributes>
+                        </textField>
+                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UWL-ki-hkt" customClass="CustomTextField" customModule="AppDATN" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="176" width="361" height="60"/>
+                            <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="60" id="vu0-rT-gRn"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" textContentType="tel"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="leftPadding">
+                                    <real key="value" value="16"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="image" keyPath="leftImage" value="img-telephone-image"/>
+                            </userDefinedRuntimeAttributes>
+                        </textField>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Change Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Mg-gb-EcL">
+                            <rect key="frame" x="0.0" y="268" width="361" height="24"/>
+                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Current Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aiO-hH-V33" customClass="CustomTextField" customModule="AppDATN" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="308" width="361" height="60"/>
+                            <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="60" id="TW9-kd-rEs"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="leftPadding">
+                                    <real key="value" value="16"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="image" keyPath="leftImage" value="img-lock-image"/>
+                                <userDefinedRuntimeAttribute type="image" keyPath="rightImage" value="eye" catalog="system"/>
+                            </userDefinedRuntimeAttributes>
+                        </textField>
+                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="New Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VX7-Ue-NSH" customClass="CustomTextField" customModule="AppDATN" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="376" width="361" height="60"/>
+                            <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="60" id="lXj-QF-MXh"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="leftPadding">
+                                    <real key="value" value="16"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="image" keyPath="leftImage" value="img-lock-image"/>
+                                <userDefinedRuntimeAttribute type="image" keyPath="rightImage" value="eye" catalog="system"/>
+                            </userDefinedRuntimeAttributes>
+                        </textField>
+                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="auH-Bk-7m8" customClass="CustomTextField" customModule="AppDATN" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="444" width="361" height="60"/>
+                            <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="60" id="734-Tp-xu5"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="leftPadding">
+                                    <real key="value" value="16"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="image" keyPath="leftImage" value="img-lock-image"/>
+                            </userDefinedRuntimeAttributes>
+                        </textField>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pm7-Yy-gdf">
+                            <rect key="frame" x="0.0" y="651" width="361" height="60"/>
+                            <color key="backgroundColor" systemColor="systemGreenColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="60" id="8aa-I1-NLe"/>
+                            </constraints>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="Save Setting">
+                                <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="20"/>
+                            </buttonConfiguration>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="8"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="savePressed:" destination="-1" eventType="touchUpInside" id="U6O-8P-rkc"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="pm7-Yy-gdf" firstAttribute="leading" secondItem="yVK-bY-NRS" secondAttribute="leading" id="1PJ-h9-WoD"/>
+                        <constraint firstItem="aiO-hH-V33" firstAttribute="leading" secondItem="yVK-bY-NRS" secondAttribute="leading" id="217-zC-GIB"/>
+                        <constraint firstItem="r6C-6R-qAM" firstAttribute="top" secondItem="teO-Zr-mce" secondAttribute="bottom" constant="16" id="3Rd-qY-AeC"/>
+                        <constraint firstAttribute="trailing" secondItem="r6C-6R-qAM" secondAttribute="trailing" id="6YO-4Q-xs3"/>
+                        <constraint firstItem="r6C-6R-qAM" firstAttribute="leading" secondItem="yVK-bY-NRS" secondAttribute="leading" id="7GX-u7-gUf"/>
+                        <constraint firstAttribute="trailing" secondItem="XCX-9i-cG3" secondAttribute="trailing" id="7yV-IQ-OJO"/>
+                        <constraint firstItem="auH-Bk-7m8" firstAttribute="top" secondItem="VX7-Ue-NSH" secondAttribute="bottom" constant="8" id="Ahy-ri-rP7"/>
+                        <constraint firstAttribute="trailing" secondItem="pm7-Yy-gdf" secondAttribute="trailing" id="DKd-rF-juu"/>
+                        <constraint firstAttribute="trailing" secondItem="7Mg-gb-EcL" secondAttribute="trailing" id="LQd-pe-ci6"/>
+                        <constraint firstItem="UWL-ki-hkt" firstAttribute="top" secondItem="XCX-9i-cG3" secondAttribute="bottom" constant="8" id="RKI-dP-UCz"/>
+                        <constraint firstItem="XCX-9i-cG3" firstAttribute="leading" secondItem="yVK-bY-NRS" secondAttribute="leading" id="Sxt-v5-HMj"/>
+                        <constraint firstItem="aiO-hH-V33" firstAttribute="top" secondItem="7Mg-gb-EcL" secondAttribute="bottom" constant="16" id="YPm-IR-Sjn"/>
+                        <constraint firstAttribute="trailing" secondItem="aiO-hH-V33" secondAttribute="trailing" id="a1c-XX-62O"/>
+                        <constraint firstAttribute="trailing" secondItem="UWL-ki-hkt" secondAttribute="trailing" id="b1C-QX-9X1"/>
+                        <constraint firstItem="VX7-Ue-NSH" firstAttribute="leading" secondItem="yVK-bY-NRS" secondAttribute="leading" id="cPr-GE-HKt"/>
+                        <constraint firstAttribute="trailing" secondItem="VX7-Ue-NSH" secondAttribute="trailing" id="dPB-Jj-g0G"/>
+                        <constraint firstItem="XCX-9i-cG3" firstAttribute="top" secondItem="r6C-6R-qAM" secondAttribute="bottom" constant="8" id="frT-ms-e7f"/>
+                        <constraint firstItem="UWL-ki-hkt" firstAttribute="leading" secondItem="yVK-bY-NRS" secondAttribute="leading" id="j6x-Wv-Yhl"/>
+                        <constraint firstItem="auH-Bk-7m8" firstAttribute="leading" secondItem="yVK-bY-NRS" secondAttribute="leading" id="jZD-6Z-Wsd"/>
+                        <constraint firstItem="teO-Zr-mce" firstAttribute="leading" secondItem="yVK-bY-NRS" secondAttribute="leading" id="nOI-3g-VfJ"/>
+                        <constraint firstItem="VX7-Ue-NSH" firstAttribute="top" secondItem="aiO-hH-V33" secondAttribute="bottom" constant="8" id="p1o-1Y-Q50"/>
+                        <constraint firstItem="7Mg-gb-EcL" firstAttribute="top" secondItem="UWL-ki-hkt" secondAttribute="bottom" constant="32" id="pba-vV-bvP"/>
+                        <constraint firstAttribute="trailing" secondItem="auH-Bk-7m8" secondAttribute="trailing" id="qbf-mW-cst"/>
+                        <constraint firstItem="teO-Zr-mce" firstAttribute="top" secondItem="yVK-bY-NRS" secondAttribute="top" id="tfe-CF-0BB"/>
+                        <constraint firstItem="7Mg-gb-EcL" firstAttribute="leading" secondItem="yVK-bY-NRS" secondAttribute="leading" id="vmu-DE-ZOt"/>
+                        <constraint firstAttribute="bottom" secondItem="pm7-Yy-gdf" secondAttribute="bottom" id="z4Z-tD-a2D"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="yVK-bY-NRS" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="32" id="0bW-vO-bou"/>
+                <constraint firstItem="yVK-bY-NRS" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="QrM-fM-et8"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="yVK-bY-NRS" secondAttribute="trailing" constant="16" id="Wai-Vh-46h"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="yVK-bY-NRS" secondAttribute="bottom" constant="16" id="dLX-6T-ncy"/>
+            </constraints>
+            <point key="canvasLocation" x="138" y="21"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="eye" catalog="system" width="128" height="79"/>
+        <image name="img-about-image" width="20" height="20"/>
+        <image name="img-lock-image" width="24" height="24"/>
+        <image name="img-mail-image" width="24" height="24"/>
+        <image name="img-telephone-image" width="23" height="23"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

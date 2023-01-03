@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="70" id="KGk-i7-Jjw" customClass="UserCell" customModule="AppDATN" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="70"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="70"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img-bag-image" translatesAutoresizingMaskIntoConstraints="NO" id="Mc6-jr-YQ3">
+                        <rect key="frame" x="32" y="12" width="24" height="24"/>
+                        <color key="tintColor" systemColor="systemGreenColor"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="24" id="bdI-f2-rkz"/>
+                            <constraint firstAttribute="width" constant="24" id="vgu-Ym-fuI"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h1g-tb-rOj">
+                        <rect key="frame" x="72" y="12" width="184" height="24"/>
+                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pkn-K2-PkF">
+                        <rect key="frame" x="264" y="12" width="24" height="24"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="24" id="Xn0-Ub-kVX"/>
+                        </constraints>
+                        <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <state key="normal" title="Button"/>
+                        <buttonConfiguration key="configuration" style="plain">
+                            <imageReference key="image" image="img-arrow-image" symbolScale="medium"/>
+                        </buttonConfiguration>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Pkn-K2-PkF" firstAttribute="top" secondItem="Mc6-jr-YQ3" secondAttribute="top" id="4ha-Fc-lch"/>
+                    <constraint firstItem="h1g-tb-rOj" firstAttribute="leading" secondItem="Mc6-jr-YQ3" secondAttribute="trailing" constant="16" id="7Cn-0o-H8v"/>
+                    <constraint firstItem="h1g-tb-rOj" firstAttribute="bottom" secondItem="Mc6-jr-YQ3" secondAttribute="bottom" id="9QH-wb-zV4"/>
+                    <constraint firstAttribute="bottom" secondItem="Mc6-jr-YQ3" secondAttribute="bottom" constant="12" id="QRF-r6-O82"/>
+                    <constraint firstItem="h1g-tb-rOj" firstAttribute="top" secondItem="Mc6-jr-YQ3" secondAttribute="top" id="YzH-Wg-pFg"/>
+                    <constraint firstItem="Pkn-K2-PkF" firstAttribute="leading" secondItem="h1g-tb-rOj" secondAttribute="trailing" constant="8" id="gYP-Rp-qcm"/>
+                    <constraint firstAttribute="trailing" secondItem="Pkn-K2-PkF" secondAttribute="trailing" constant="32" id="isI-Xn-g9j"/>
+                    <constraint firstItem="Mc6-jr-YQ3" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="ma4-B4-lEP"/>
+                    <constraint firstItem="Pkn-K2-PkF" firstAttribute="bottom" secondItem="Mc6-jr-YQ3" secondAttribute="bottom" id="rW4-jx-iHR"/>
+                    <constraint firstItem="Mc6-jr-YQ3" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="32" id="wg5-i5-ZMS"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" red="0.95686274509803915" green="0.96078431372549022" blue="0.97647058823529409" alpha="1" colorSpace="calibratedRGB"/>
+            <connections>
+                <outlet property="arrowButton" destination="Pkn-K2-PkF" id="hoi-6o-E5f"/>
+                <outlet property="iconImageView" destination="Mc6-jr-YQ3" id="ex2-An-n6x"/>
+                <outlet property="titleLabel" destination="h1g-tb-rOj" id="wsS-Vq-n87"/>
+            </connections>
+            <point key="canvasLocation" x="-24.427480916030532" y="29.577464788732396"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="img-arrow-image" width="10.666666984558105" height="18"/>
+        <image name="img-bag-image" width="13" height="15"/>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
