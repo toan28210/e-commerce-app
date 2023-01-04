@@ -8,7 +8,7 @@
 import UIKit
 protocol CategoryCellDelegate: AnyObject {
     func see(categories: [CategoryModel])
-    func getProductFollowCat(catId: String)
+    func getProductFollowCat(catId: String, title: String)
 }
 
 class CategoryCell: UICollectionViewCell {
@@ -120,7 +120,7 @@ extension CategoryCell: UICollectionViewDataSource {
         return header
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        self.cateDelegate?.getProductFollowCat(catId: categories[indexPath.row].cat ?? "")
+        self.cateDelegate?.getProductFollowCat(catId: categories[indexPath.row].cat ?? "", title: categories[indexPath.row].nameCate ?? "")
     }
 }
 

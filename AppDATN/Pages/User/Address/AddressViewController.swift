@@ -12,12 +12,16 @@ class AddressViewController: UIViewController, AddressCellDelegate {
     var address: [AddressModel] = []
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "My Address"
-        navigationController?.isNavigationBarHidden = false
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Add", style: .plain, target: self, action: #selector(addTapped))
+        setupNavigation()
         configure()
         registerCell()
         fetchAddress()
+    }
+    func setupNavigation(){
+        title = "My Address"
+        navigationController?.isNavigationBarHidden = false
+//        tabBarController?.tabBar.isHidden = true
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Add", style: .plain, target: self, action: #selector(addTapped))
     }
     
     @IBAction func updateAddressPressed(_ sender: UIButton) {

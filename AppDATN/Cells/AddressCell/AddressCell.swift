@@ -33,10 +33,8 @@ class AddressCell: UICollectionViewCell {
     }
 
     @IBAction func showEditPressed(_ sender: UIButton) {
-        print(123)
         formEditAddress.backgroundColor = .red
-        self.frame.size.height = 500
-        print("height \(self.frame.height)")
+//        self.frame.size.height = 500
         self.delegate?.reload()
     }
 }

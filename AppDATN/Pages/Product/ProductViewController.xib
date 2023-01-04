@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -19,7 +20,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="MGT-Oj-Sbb">
-                    <rect key="frame" x="0.0" y="0.0" width="393" height="818"/>
+                    <rect key="frame" x="0.0" y="59" width="393" height="759"/>
                     <color key="backgroundColor" red="0.95686274509803915" green="0.96078431372549022" blue="0.97647058823529409" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="JVr-Pl-b70">
                         <size key="itemSize" width="128" height="128"/>
@@ -34,7 +35,7 @@
             <constraints>
                 <constraint firstItem="MGT-Oj-Sbb" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="ZhM-94-kaH"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="MGT-Oj-Sbb" secondAttribute="trailing" id="a1y-Ty-LBd"/>
-                <constraint firstItem="MGT-Oj-Sbb" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="k9U-YF-frz"/>
+                <constraint firstItem="MGT-Oj-Sbb" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="k9U-YF-frz"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="MGT-Oj-Sbb" secondAttribute="bottom" id="xoc-Pg-zDg"/>
             </constraints>
             <point key="canvasLocation" x="-25" y="21"/>

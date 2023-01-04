@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -38,10 +39,10 @@
                             <constraint firstAttribute="width" constant="24" id="Xn0-Ub-kVX"/>
                         </constraints>
                         <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <state key="normal" title="Button"/>
-                        <buttonConfiguration key="configuration" style="plain">
+                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                        <state key="normal">
                             <imageReference key="image" image="img-arrow-image" symbolScale="medium"/>
-                        </buttonConfiguration>
+                        </state>
                     </button>
                 </subviews>
                 <constraints>
@@ -64,7 +65,7 @@
                 <outlet property="iconImageView" destination="Mc6-jr-YQ3" id="ex2-An-n6x"/>
                 <outlet property="titleLabel" destination="h1g-tb-rOj" id="wsS-Vq-n87"/>
             </connections>
-            <point key="canvasLocation" x="-24.427480916030532" y="29.577464788732396"/>
+            <point key="canvasLocation" x="-23" y="27"/>
         </tableViewCell>
     </objects>
     <resources>

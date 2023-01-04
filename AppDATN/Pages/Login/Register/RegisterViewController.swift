@@ -42,6 +42,9 @@ class RegisterViewController: UIViewController {
     let validation = ValidationTextField()
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupPresentLogin()
+    }
+    func setupPresentLogin() {
         let tap = UITapGestureRecognizer(target: self, action: #selector(nextPage))
         presentLogin.isUserInteractionEnabled = true
         presentLogin.addGestureRecognizer(tap)
@@ -50,9 +53,8 @@ class RegisterViewController: UIViewController {
         usernameTextField.borderStyle = .none
     }
     @objc func nextPage() {
-        let login = LoginViewController()
-        login.modalPresentationStyle = .fullScreen
-        self.present(login, animated: true)
+        let login = LoginViewController()	
+        navigationController?.pushViewController(login, animated: true)
     }
     @IBAction func changeEmail(_ sender: Any) {
         if let email = emailTextField.text {

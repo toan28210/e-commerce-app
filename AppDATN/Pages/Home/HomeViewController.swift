@@ -90,10 +90,10 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDelegate
 }
 
 extension HomeViewController: CategoryCellDelegate {
-    func getProductFollowCat(catId: String) {
+    func getProductFollowCat(catId: String, title: String) {
         let productVC = ProductViewController()
-        print("catID : \(catId)")
         productVC.getProductCat(catId: catId)
+        productVC.title = title
         navigationController?.pushViewController(productVC, animated: true)
     }
     func see(categories: [CategoryModel]) {

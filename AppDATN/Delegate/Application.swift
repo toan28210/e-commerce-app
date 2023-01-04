@@ -50,7 +50,7 @@ final class Application {
         let navigation = UINavigationController(rootViewController: home)
         home.tabBarItem = UITabBarItem(title: "", image: UIImage(named: "img-home-image"), tag: 0)
         // Gio hang
-        let far = FagoritesViewController()
+        let far = FavoritesViewController()
         let farNavi = UINavigationController(rootViewController: far)
         far.tabBarItem = UITabBarItem(title: "", image: UIImage(named: "ima-myFav-image"), tag: 1)
         //user

@@ -61,6 +61,9 @@ extension UserViewController: UITableViewDelegate {
             navigationController?.pushViewController(order, animated: true)
         } else if indexPath.row == 7 {
             signOut()
+        } else if indexPath.row == 2 {
+            let far = FavoritesViewController()
+            navigationController?.pushViewController(far, animated: true)
         }
     }
 }

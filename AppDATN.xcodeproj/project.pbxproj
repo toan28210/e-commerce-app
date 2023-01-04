@@ -72,7 +72,7 @@
 		2F7FF144293DCF3400775711 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F7FF142293DCF3400775711 /* LaunchScreen.storyboard */; };
 		2F7FF155293DCFDA00775711 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7FF153293DCFDA00775711 /* StartViewController.swift */; };
 		2F7FF156293DCFDA00775711 /* StartViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F7FF154293DCFDA00775711 /* StartViewController.xib */; };
-		2FBE7913296436ED000E6B62 /* FagoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FBE7911296436ED000E6B62 /* FagoritesViewController.swift */; };
+		2FBE7913296436ED000E6B62 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FBE7911296436ED000E6B62 /* FavoritesViewController.swift */; };
 		2FBE7914296436ED000E6B62 /* FagoritesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2FBE7912296436ED000E6B62 /* FagoritesViewController.xib */; };
 		2FBEB7A22955936C0080EB42 /* SearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FBEB7A02955936C0080EB42 /* SearchCell.swift */; };
 		2FBEB7A32955936C0080EB42 /* SearchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2FBEB7A12955936C0080EB42 /* SearchCell.xib */; };
@@ -105,8 +105,6 @@
 		2FF8CACB2954515100563C3C /* ProductModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF8CACA2954515100563C3C /* ProductModel.swift */; };
 		2FFA5ACB295467C70007AB14 /* CategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FFA5ACA295467C70007AB14 /* CategoryModel.swift */; };
 		2FFA5ACD295470900007AB14 /* Method.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FFA5ACC295470900007AB14 /* Method.swift */; };
-		2FFE7EF229582399001711CF /* AddressView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2FFE7EF129582399001711CF /* AddressView.xib */; };
-		2FFE7EF4295823B2001711CF /* AddressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FFE7EF3295823B2001711CF /* AddressView.swift */; };
 		2FFE7EF829582554001711CF /* AddAddressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FFE7EF629582554001711CF /* AddAddressViewController.swift */; };
 		2FFE7EF929582554001711CF /* AddAddressViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2FFE7EF729582554001711CF /* AddAddressViewController.xib */; };
 		2FFE7EFB29583C5A001711CF /* AddressModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FFE7EFA29583C5A001711CF /* AddressModel.swift */; };
@@ -180,7 +178,7 @@
 		2F7FF145293DCF3400775711 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2F7FF153293DCFDA00775711 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		2F7FF154293DCFDA00775711 /* StartViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StartViewController.xib; sourceTree = "<group>"; };
-		2FBE7911296436ED000E6B62 /* FagoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FagoritesViewController.swift; sourceTree = "<group>"; };
+		2FBE7911296436ED000E6B62 /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
 		2FBE7912296436ED000E6B62 /* FagoritesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FagoritesViewController.xib; sourceTree = "<group>"; };
 		2FBEB7A02955936C0080EB42 /* SearchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCell.swift; sourceTree = "<group>"; };
 		2FBEB7A12955936C0080EB42 /* SearchCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchCell.xib; sourceTree = "<group>"; };
@@ -213,8 +211,6 @@
 		2FF8CACA2954515100563C3C /* ProductModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductModel.swift; sourceTree = "<group>"; };
 		2FFA5ACA295467C70007AB14 /* CategoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryModel.swift; sourceTree = "<group>"; };
 		2FFA5ACC295470900007AB14 /* Method.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Method.swift; sourceTree = "<group>"; };
-		2FFE7EF129582399001711CF /* AddressView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddressView.xib; sourceTree = "<group>"; };
-		2FFE7EF3295823B2001711CF /* AddressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressView.swift; sourceTree = "<group>"; };
 		2FFE7EF629582554001711CF /* AddAddressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAddressViewController.swift; sourceTree = "<group>"; };
 		2FFE7EF729582554001711CF /* AddAddressViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddAddressViewController.xib; sourceTree = "<group>"; };
 		2FFE7EFA29583C5A001711CF /* AddressModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressModel.swift; sourceTree = "<group>"; };
@@ -238,7 +234,6 @@
 		2F0C0C00294881F600A0B235 /* Customs */ = {
 			isa = PBXGroup;
 			children = (
-				2FBE790D29642B5B000E6B62 /* Extension */,
 				2F493B442941E3B800D169D5 /* CustomTextField.swift */,
 				2F44465C2949A1700064508C /* ProductButtonCart.xib */,
 				2F44465E2949A2200064508C /* ProductButtonCart.swift */,
@@ -246,8 +241,6 @@
 				2F2050202951AB5F00DCB9C9 /* CategoryHeader.swift */,
 				2FBEB7A42955ADA80080EB42 /* SearchHeader.xib */,
 				2FBEB7A62955AE040080EB42 /* SearchHeader.swift */,
-				2FFE7EF129582399001711CF /* AddressView.xib */,
-				2FFE7EF3295823B2001711CF /* AddressView.swift */,
 			);
 			path = Customs;
 			sourceTree = "<group>";
@@ -342,6 +335,8 @@
 		2F53835D29569A8300434575 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				2F46CA2F29470ABB00F514C1 /* UIView+Extension.swift */,
+				2F2B39CE29644D6D00C96FFB /* UserDefault+Extension.swift */,
 				2F53835E29569AB500434575 /* Extension + UILabel.swift */,
 			);
 			path = Extension;
@@ -414,7 +409,7 @@
 		2F7FF14E293DCF9B00775711 /* Pages */ = {
 			isa = PBXGroup;
 			children = (
-				2FBE791029643698000E6B62 /* Fagorites */,
+				2FBE791029643698000E6B62 /* Favorites */,
 				2FBE790E29642B7E000E6B62 /* Product */,
 				2FBE790B29642AFD000E6B62 /* Welcome */,
 				2FBE790629642A98000E6B62 /* Login */,
@@ -579,15 +574,6 @@
 			path = CartCell;
 			sourceTree = "<group>";
 		};
-		2FBE790D29642B5B000E6B62 /* Extension */ = {
-			isa = PBXGroup;
-			children = (
-				2F46CA2F29470ABB00F514C1 /* UIView+Extension.swift */,
-				2F2B39CE29644D6D00C96FFB /* UserDefault+Extension.swift */,
-			);
-			path = Extension;
-			sourceTree = "<group>";
-		};
 		2FBE790E29642B7E000E6B62 /* Product */ = {
 			isa = PBXGroup;
 			children = (
@@ -605,13 +591,13 @@
 			path = Validation;
 			sourceTree = "<group>";
 		};
-		2FBE791029643698000E6B62 /* Fagorites */ = {
+		2FBE791029643698000E6B62 /* Favorites */ = {
 			isa = PBXGroup;
 			children = (
-				2FBE7911296436ED000E6B62 /* FagoritesViewController.swift */,
+				2FBE7911296436ED000E6B62 /* FavoritesViewController.swift */,
 				2FBE7912296436ED000E6B62 /* FagoritesViewController.xib */,
 			);
-			path = Fagorites;
+			path = Favorites;
 			sourceTree = "<group>";
 		};
 		2FBEB79F295593480080EB42 /* SearchCells */ = {
@@ -771,7 +757,6 @@
 				2FD812AE2949A40400B07775 /* ProductViewController.xib in Resources */,
 				2F5EEDD7293DE7EC00ACE5AE /* WelcomeViewController.xib in Resources */,
 				2F5EEDEE293E38F500ACE5AE /* CartViewController.xib in Resources */,
-				2FFE7EF229582399001711CF /* AddressView.xib in Resources */,
 				2F5EEDE6293E343F00ACE5AE /* HomeViewController.xib in Resources */,
 				2FBEB7A52955ADA80080EB42 /* SearchHeader.xib in Resources */,
 				2F4EF989295A9EA700C19AB4 /* OrderCell.xib in Resources */,
@@ -816,7 +801,6 @@
 				2FFA5ACB295467C70007AB14 /* CategoryModel.swift in Sources */,
 				2F7FF138293DCF3000775711 /* AppDelegate.swift in Sources */,
 				2F2050162951A2B800DCB9C9 /* CategoryCell.swift in Sources */,
-				2FFE7EF4295823B2001711CF /* AddressView.swift in Sources */,
 				2F53835F29569AB500434575 /* Extension + UILabel.swift in Sources */,
 				2F4EE6A8295893E100F50503 /* OrderDetailModel.swift in Sources */,
 				2F5EEDED293E38F500ACE5AE /* CartViewController.swift in Sources */,
@@ -827,7 +811,7 @@
 				2FF8CAC2295435A500563C3C /* ValidationTextField.swift in Sources */,
 				2F2BE6CA295740400007D323 /* RatingModel.swift in Sources */,
 				2F304C28293F193E00DB297F /* CartCell.swift in Sources */,
-				2FBE7913296436ED000E6B62 /* FagoritesViewController.swift in Sources */,
+				2FBE7913296436ED000E6B62 /* FavoritesViewController.swift in Sources */,
 				2F2BE6CE295743700007D323 /* ReviewCell.swift in Sources */,
 				2F6CE7EA29586142008F855A /* MyOrderViewController.swift in Sources */,
 				2FCDA0362953060A0067CDC8 /* UserCell.swift in Sources */,

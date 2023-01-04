@@ -13,7 +13,6 @@ class ProductViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.isNavigationBarHidden = false
-        title = "Vegetables"
         configureCollectionView()
         registerCell()
     }

@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -37,28 +38,40 @@
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="anh" translatesAutoresizingMaskIntoConstraints="NO" id="5dN-94-vxo">
                                     <rect key="frame" x="0.0" y="0.0" width="114" height="114"/>
                                 </imageView>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qiU-Z3-kJM">
-                                    <rect key="frame" x="83" y="85.000000000000014" width="25" height="25"/>
-                                    <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dHB-Gh-icx">
+                                    <rect key="frame" x="85" y="85.000000000000014" width="25" height="25"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qiU-Z3-kJM">
+                                            <rect key="frame" x="0.0" y="0.0" width="25" height="25"/>
+                                            <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="25" id="LH1-gE-Iy8"/>
+                                                <constraint firstAttribute="height" constant="25" id="eZf-tf-ixY"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="5"/>
+                                            <color key="tintColor" red="0.95686274510000002" green="0.96078431369999995" blue="0.97647058819999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                            <state key="normal">
+                                                <imageReference key="image" image="camera.fill" catalog="system" symbolScale="small"/>
+                                            </state>
+                                        </button>
+                                    </subviews>
                                     <constraints>
-                                        <constraint firstAttribute="width" constant="25" id="LH1-gE-Iy8"/>
-                                        <constraint firstAttribute="height" constant="25" id="eZf-tf-ixY"/>
+                                        <constraint firstItem="qiU-Z3-kJM" firstAttribute="centerX" secondItem="dHB-Gh-icx" secondAttribute="centerX" id="HNF-xj-dZB"/>
+                                        <constraint firstItem="qiU-Z3-kJM" firstAttribute="centerY" secondItem="dHB-Gh-icx" secondAttribute="centerY" id="U4G-iT-R4P"/>
+                                        <constraint firstAttribute="width" constant="25" id="aug-Uk-HVl"/>
+                                        <constraint firstAttribute="height" constant="25" id="lSy-it-Aca"/>
                                     </constraints>
-                                    <color key="tintColor" red="0.95686274510000002" green="0.96078431369999995" blue="0.97647058819999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    <state key="normal" title="Button"/>
-                                    <buttonConfiguration key="configuration" style="plain">
-                                        <imageReference key="image" image="camera.fill" catalog="system" symbolScale="small"/>
-                                    </buttonConfiguration>
-                                </button>
+                                </view>
                             </subviews>
                             <constraints>
                                 <constraint firstAttribute="width" constant="114" id="2Ux-ph-jJN"/>
                                 <constraint firstAttribute="bottom" secondItem="5dN-94-vxo" secondAttribute="bottom" id="59f-HC-hbq"/>
                                 <constraint firstAttribute="trailing" secondItem="5dN-94-vxo" secondAttribute="trailing" id="8LH-3L-dEk"/>
                                 <constraint firstItem="5dN-94-vxo" firstAttribute="leading" secondItem="Loe-Kx-LCQ" secondAttribute="leading" id="CR7-vc-3Cq"/>
-                                <constraint firstAttribute="trailing" secondItem="qiU-Z3-kJM" secondAttribute="trailing" constant="6" id="PlC-iG-Wq0"/>
+                                <constraint firstAttribute="bottom" secondItem="dHB-Gh-icx" secondAttribute="bottom" constant="4" id="NYT-bE-2j9"/>
                                 <constraint firstAttribute="height" constant="114" id="SxK-z4-ZNx"/>
-                                <constraint firstAttribute="bottom" secondItem="qiU-Z3-kJM" secondAttribute="bottom" constant="4" id="hiB-PM-cVO"/>
+                                <constraint firstAttribute="trailing" secondItem="dHB-Gh-icx" secondAttribute="trailing" constant="4" id="fkQ-Ye-u5D"/>
                                 <constraint firstItem="5dN-94-vxo" firstAttribute="top" secondItem="Loe-Kx-LCQ" secondAttribute="top" id="tj4-zB-0wz"/>
                             </constraints>
                         </view>
@@ -106,7 +119,7 @@
                 <constraint firstItem="tU7-zi-z3b" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="pSN-xx-6To"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="OiB-wi-2mm" secondAttribute="trailing" id="pVS-cv-KG7"/>
             </constraints>
-            <point key="canvasLocation" x="-25" y="21"/>
+            <point key="canvasLocation" x="-25.190839694656489" y="20.422535211267608"/>
         </view>
     </objects>
     <resources>
