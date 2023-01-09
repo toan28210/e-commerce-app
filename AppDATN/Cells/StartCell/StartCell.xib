@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -11,17 +12,17 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="StartCell" customModule="AppDATN" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="355" height="368"/>
+            <rect key="frame" x="0.0" y="0.0" width="355" height="766"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="355" height="368"/>
+                <rect key="frame" x="0.0" y="0.0" width="355" height="766"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bRu-Bb-ChG">
-                        <rect key="frame" x="0.0" y="0.0" width="355" height="368"/>
+                        <rect key="frame" x="0.0" y="0.0" width="355" height="766"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="FCc-Gx-Myf">
-                                <rect key="frame" x="0.0" y="0.0" width="355" height="368"/>
+                                <rect key="frame" x="0.0" y="0.0" width="355" height="766"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l9k-0U-iw0">
                                 <rect key="frame" x="32" y="100" width="291" height="36"/>
@@ -59,13 +60,13 @@
                 <constraint firstItem="bRu-Bb-ChG" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="cCZ-z9-A7Z"/>
                 <constraint firstAttribute="bottom" secondItem="bRu-Bb-ChG" secondAttribute="bottom" id="oa1-Ot-q5e"/>
             </constraints>
-            <size key="customSize" width="355" height="368"/>
+            <size key="customSize" width="355" height="766"/>
             <connections>
                 <outlet property="startDesLabel" destination="0CK-CH-0Ip" id="moB-au-Oim"/>
                 <outlet property="startImageView" destination="FCc-Gx-Myf" id="ZaB-wb-enB"/>
                 <outlet property="startTitleLabel" destination="l9k-0U-iw0" id="WMq-On-qEi"/>
             </connections>
-            <point key="canvasLocation" x="371.75572519083966" y="132.3943661971831"/>
+            <point key="canvasLocation" x="370.2290076335878" y="271.83098591549299"/>
         </collectionViewCell>
     </objects>
     <resources>

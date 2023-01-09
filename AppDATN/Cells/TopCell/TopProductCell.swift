@@ -23,7 +23,8 @@ class TopProductCell: UICollectionViewCell {
         getData()
     }
     func getData() {
-        let url = URL(string: "http://localhost:5000/api/products")!
+        let userId = UserDefaults.standard.value(forKey: "userid") ?? ""
+        let url = URL(string: "http://localhost:5000/api/recommend/\(userId)")!
         var request = URLRequest(url: url)
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         request.httpMethod = "GET"
@@ -47,6 +48,7 @@ class TopProductCell: UICollectionViewCell {
 //                    let json = try JSONSerialization.jsonObject(with: data, options: [])
                     let jsonDecoder = JSONDecoder()
                     let json = try jsonDecoder.decode([ProductModel].self, from: data)
+                    print("recommend: \(json)")
                     self.products = json
                     DispatchQueue.main.async {
                         self.collectionView.reloadData()
@@ -115,7 +117,7 @@ extension TopProductCell: UICollectionViewDataSource {
             for: indexPath) as? CategoryHeaderView else {
             return UICollectionReusableView()
         }
-        header.superView.namHeaedr.text = "Top 10 product"
+        header.superView.namHeaedr.text = "Product"
         return header
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {

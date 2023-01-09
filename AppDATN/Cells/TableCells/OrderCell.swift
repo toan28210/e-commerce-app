@@ -14,6 +14,10 @@ class OrderCell: UITableViewCell {
     @IBOutlet weak var viewOrderDetail: UIView!
     @IBOutlet weak var showDeliverView: UIView!
     @IBOutlet weak var showButton: UIButton!
+    @IBOutlet weak var idOrderLb: UILabel!
+    @IBOutlet weak var dateOrderLb: UILabel!
+    @IBOutlet weak var countProductLb: UILabel!
+    @IBOutlet weak var totalOrder: UILabel!
     weak var delegate: OrderCellDelegate?
     weak var orderViewController: MyOrderViewController?
     static let identifier = "OrderCell"
@@ -39,7 +43,9 @@ class OrderCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
     func configure(order: OrderModel) {
-        
+        idOrderLb.text = "Order(\(order._id ?? ""))"
+        countProductLb.text = "Items: \(order.details?.count ?? 0)"
+        totalOrder.text = "Total: \(order.amount ?? 0) VND"
     }
     
     @IBAction func showDetail(_ sender: UIButton) {

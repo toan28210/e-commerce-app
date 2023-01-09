@@ -8,13 +8,14 @@
 import UIKit
 
 class StartCell: UICollectionViewCell {
+    @IBOutlet weak var startDesLabel: UILabel!
+    @IBOutlet private weak var startImageView: UIImageView!
+    @IBOutlet weak var startTitleLabel: UILabel!
+    
     static let identifier = "StartCell"
     static func nib() -> UINib {
         return UINib(nibName: StartCell.identifier, bundle: .main)
     }
-    @IBOutlet weak var startDesLabel: UILabel!
-    @IBOutlet private weak var startImageView: UIImageView!
-    @IBOutlet weak var startTitleLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
     }

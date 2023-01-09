@@ -34,3 +34,9 @@ extension UIView {
        self.layer.addSublayer(bottomBorder)
     }
 }
+
+extension String {
+    var asUrl: URL? {
+        return URL(string: self)
+    }
+}

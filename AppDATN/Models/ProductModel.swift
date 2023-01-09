@@ -25,6 +25,10 @@ struct ProductModel: Decodable {
     let createdAt: String?
     let updatedAt: String?
     let __v: Int?
+    
+    var formattedPrice: String {
+        return "\(FormatNumber.shared.formatter(total: price ?? 0)) calories"
+    }
 }
 
 struct Products: Decodable {

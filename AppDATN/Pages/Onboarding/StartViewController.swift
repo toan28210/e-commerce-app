@@ -36,7 +36,6 @@ class StartViewController: UIViewController {
     }
     @IBAction func handleClickGetStart(_ sender: UIButton) {
         if currentPage == startDatas.count - 1 {
-            print("Welcome")
             let welcome = WelcomeViewController()
             self.present(welcome, animated: true)
             UserDefaults.standard.hasOnboarded = true
@@ -80,6 +79,7 @@ extension StartViewController: UICollectionViewDataSource {
         guard let startCell = collectionView.dequeueReusableCell(withReuseIdentifier: StartCell.identifier, for: indexPath) as? StartCell else {
             return StartCell()
         }
+        
         startCell.configure(with: startDatas[indexPath.row])
         return startCell
     }

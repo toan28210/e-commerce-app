@@ -81,6 +81,7 @@ class AddAddressViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Add Address"
+        tabBarController?.tabBar.isHidden = true
     }
     @IBAction func addAddressPressed(_ sender: UIButton) {
         let userId = UserDefaults.standard.value(forKey: "userid") ?? ""

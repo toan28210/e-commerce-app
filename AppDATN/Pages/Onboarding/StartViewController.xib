@@ -22,10 +22,10 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="z41-RS-ogz">
-                    <rect key="frame" x="0.0" y="-10" width="393" height="862"/>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" contentInsetAdjustmentBehavior="never" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="z41-RS-ogz">
+                    <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="Ga2-bm-Zta">
+                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="Ga2-bm-Zta">
                         <size key="itemSize" width="128" height="128"/>
                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
                         <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -63,7 +63,7 @@
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="z41-RS-ogz" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="-10" id="3Oo-qQ-Wvj"/>
+                <constraint firstItem="z41-RS-ogz" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="3Oo-qQ-Wvj"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="WP0-6b-EE1" secondAttribute="trailing" constant="16" id="8xM-T1-jPY"/>
                 <constraint firstItem="WP0-6b-EE1" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="AOs-j4-sdl"/>
                 <constraint firstAttribute="trailing" secondItem="z41-RS-ogz" secondAttribute="trailing" id="Xn4-5e-nNt"/>

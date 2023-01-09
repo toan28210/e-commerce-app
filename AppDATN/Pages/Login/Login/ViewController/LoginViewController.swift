@@ -107,8 +107,7 @@ class LoginViewController: UIViewController {
                     self.userDefault.set(json.username, forKey: "username")
                     self.userDefault.set(json.email, forKey: "useremail")
                     DispatchQueue.main.async {
-                        print("success")
-                        let home = HomeViewController()
+                        let home = TabbarController.shared.tabbar()
                         self.navigationController?.pushViewController(home, animated: true)
 //                        Application.shared.setupMainInterface()
                     }

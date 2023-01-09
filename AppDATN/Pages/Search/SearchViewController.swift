@@ -14,6 +14,7 @@ class SearchViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.isNavigationBarHidden = false
+        tabBarController?.tabBar.isHidden = true
         configureCollectionView()
         setupCollectionView()
         let layout = UICollectionViewFlowLayout()

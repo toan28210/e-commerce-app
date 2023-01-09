@@ -43,6 +43,7 @@ class RegisterViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupPresentLogin()
+        navigationController?.isNavigationBarHidden = true
     }
     func setupPresentLogin() {
         let tap = UITapGestureRecognizer(target: self, action: #selector(nextPage))

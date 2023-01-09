@@ -42,6 +42,7 @@ extension MyOrderViewController: UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: OrderCell.identifier, for: indexPath) as? OrderCell else {
             return OrderCell()
         }
+        cell.configure(order: orders[indexPath.row])
         cell.delegate = self
         return cell
     }

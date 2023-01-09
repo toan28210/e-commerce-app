@@ -25,6 +25,9 @@
 		2F2050232951ACD700DCB9C9 /* CategoryHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F2050222951ACD700DCB9C9 /* CategoryHeaderView.swift */; };
 		2F23A27029518E6E00D8DE83 /* SlideCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F23A26E29518E6E00D8DE83 /* SlideCell.swift */; };
 		2F23A27129518E6E00D8DE83 /* SlideCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F23A26F29518E6E00D8DE83 /* SlideCell.xib */; };
+		2F26C64E2965BAE700DEA46A /* TabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F26C64D2965BAE700DEA46A /* TabbarController.swift */; };
+		2F2B1F4129681997002AF4EC /* APIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F2B1F4029681997002AF4EC /* APIResponse.swift */; };
+		2F2B1F43296819DF002AF4EC /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F2B1F42296819DF002AF4EC /* NetworkService.swift */; };
 		2F2B39CF29644D6D00C96FFB /* UserDefault+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F2B39CE29644D6D00C96FFB /* UserDefault+Extension.swift */; };
 		2F2BE6BC295720F90007D323 /* ReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F2BE6BA295720F90007D323 /* ReviewViewController.swift */; };
 		2F2BE6BD295720F90007D323 /* ReviewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F2BE6BB295720F90007D323 /* ReviewViewController.xib */; };
@@ -47,6 +50,7 @@
 		2F44465F2949A2200064508C /* ProductButtonCart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F44465E2949A2200064508C /* ProductButtonCart.swift */; };
 		2F46CA3029470ABB00F514C1 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F46CA2F29470ABB00F514C1 /* UIView+Extension.swift */; };
 		2F493B452941E3B800D169D5 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F493B442941E3B800D169D5 /* CustomTextField.swift */; };
+		2F4C453C296BEEA5009B944D /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4C453B296BEEA5009B944D /* AppError.swift */; };
 		2F4EE6A62958881D00F50503 /* OrderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4EE6A52958881D00F50503 /* OrderModel.swift */; };
 		2F4EE6A8295893E100F50503 /* OrderDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4EE6A7295893E100F50503 /* OrderDetailModel.swift */; };
 		2F4EF988295A9EA700C19AB4 /* OrderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4EF986295A9EA400C19AB4 /* OrderCell.swift */; };
@@ -64,6 +68,11 @@
 		2F5EEDEA293E35B600ACE5AE /* HomeSlideCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F5EEDE8293E35B600ACE5AE /* HomeSlideCell.xib */; };
 		2F5EEDED293E38F500ACE5AE /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F5EEDEB293E38F500ACE5AE /* CartViewController.swift */; };
 		2F5EEDEE293E38F500ACE5AE /* CartViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F5EEDEC293E38F500ACE5AE /* CartViewController.xib */; };
+		2F6361C42967D19700EE91AE /* RxBlocking in Frameworks */ = {isa = PBXBuildFile; productRef = 2F6361C32967D19700EE91AE /* RxBlocking */; };
+		2F6361C62967D19700EE91AE /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 2F6361C52967D19700EE91AE /* RxCocoa */; };
+		2F6361C82967D19700EE91AE /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 2F6361C72967D19700EE91AE /* RxSwift */; };
+		2F6361CA2967D19700EE91AE /* RxTest in Frameworks */ = {isa = PBXBuildFile; productRef = 2F6361C92967D19700EE91AE /* RxTest */; };
+		2F6361D52967FED700EE91AE /* FormatNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F6361D42967FED700EE91AE /* FormatNumber.swift */; };
 		2F6CE7EA29586142008F855A /* MyOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F6CE7E829586142008F855A /* MyOrderViewController.swift */; };
 		2F6CE7EB29586142008F855A /* MyOrderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F6CE7E929586142008F855A /* MyOrderViewController.xib */; };
 		2F7FF138293DCF3000775711 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7FF137293DCF3000775711 /* AppDelegate.swift */; };
@@ -98,6 +107,9 @@
 		2FD812AE2949A40400B07775 /* ProductViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2FD812AC2949A40400B07775 /* ProductViewController.xib */; };
 		2FE79FDA2956A9D000C49EE4 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE79FD82956A9D000C49EE4 /* AboutViewController.swift */; };
 		2FE79FDB2956A9D000C49EE4 /* AboutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2FE79FD92956A9D000C49EE4 /* AboutViewController.xib */; };
+		2FF89530296C0A56002A9258 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = 2FF8952F296C0A56002A9258 /* Swinject */; };
+		2FF89533296C0D8C002A9258 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 2FF89532296C0D8C002A9258 /* SnapKit */; };
+		2FF89536296C0DFD002A9258 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 2FF89535296C0DFD002A9258 /* Alamofire */; };
 		2FF8CAC2295435A500563C3C /* ValidationTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF8CAC1295435A500563C3C /* ValidationTextField.swift */; };
 		2FF8CAC429544AF900563C3C /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF8CAC329544AF900563C3C /* UserModel.swift */; };
 		2FF8CAC629544D0600563C3C /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF8CAC529544D0600563C3C /* AuthManager.swift */; };
@@ -131,6 +143,9 @@
 		2F2050222951ACD700DCB9C9 /* CategoryHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryHeaderView.swift; sourceTree = "<group>"; };
 		2F23A26E29518E6E00D8DE83 /* SlideCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideCell.swift; sourceTree = "<group>"; };
 		2F23A26F29518E6E00D8DE83 /* SlideCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SlideCell.xib; sourceTree = "<group>"; };
+		2F26C64D2965BAE700DEA46A /* TabbarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarController.swift; sourceTree = "<group>"; };
+		2F2B1F4029681997002AF4EC /* APIResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIResponse.swift; sourceTree = "<group>"; };
+		2F2B1F42296819DF002AF4EC /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		2F2B39CE29644D6D00C96FFB /* UserDefault+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefault+Extension.swift"; sourceTree = "<group>"; };
 		2F2BE6BA295720F90007D323 /* ReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewViewController.swift; sourceTree = "<group>"; };
 		2F2BE6BB295720F90007D323 /* ReviewViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReviewViewController.xib; sourceTree = "<group>"; };
@@ -151,6 +166,7 @@
 		2F44465E2949A2200064508C /* ProductButtonCart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductButtonCart.swift; sourceTree = "<group>"; };
 		2F46CA2F29470ABB00F514C1 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		2F493B442941E3B800D169D5 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		2F4C453B296BEEA5009B944D /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
 		2F4EE6A52958881D00F50503 /* OrderModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderModel.swift; sourceTree = "<group>"; };
 		2F4EE6A7295893E100F50503 /* OrderDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderDetailModel.swift; sourceTree = "<group>"; };
 		2F4EF986295A9EA400C19AB4 /* OrderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderCell.swift; sourceTree = "<group>"; };
@@ -168,6 +184,7 @@
 		2F5EEDE8293E35B600ACE5AE /* HomeSlideCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeSlideCell.xib; sourceTree = "<group>"; };
 		2F5EEDEB293E38F500ACE5AE /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
 		2F5EEDEC293E38F500ACE5AE /* CartViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CartViewController.xib; sourceTree = "<group>"; };
+		2F6361D42967FED700EE91AE /* FormatNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormatNumber.swift; sourceTree = "<group>"; };
 		2F6CE7E829586142008F855A /* MyOrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyOrderViewController.swift; sourceTree = "<group>"; };
 		2F6CE7E929586142008F855A /* MyOrderViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyOrderViewController.xib; sourceTree = "<group>"; };
 		2F7FF134293DCF3000775711 /* AppDATN.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppDATN.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -223,7 +240,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2FF89536296C0DFD002A9258 /* Alamofire in Frameworks */,
 				2F2BE6C82957297F0007D323 /* Cosmos in Frameworks */,
+				2FF89533296C0D8C002A9258 /* SnapKit in Frameworks */,
+				2F6361C42967D19700EE91AE /* RxBlocking in Frameworks */,
+				2FF89530296C0A56002A9258 /* Swinject in Frameworks */,
+				2F6361C82967D19700EE91AE /* RxSwift in Frameworks */,
+				2F6361C62967D19700EE91AE /* RxCocoa in Frameworks */,
+				2F6361CA2967D19700EE91AE /* RxTest in Frameworks */,
 				2F2BE6C5295729080007D323 /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -332,6 +356,21 @@
 			path = ProductCell;
 			sourceTree = "<group>";
 		};
+		2F4C453D296BF721009B944D /* Usecase */ = {
+			isa = PBXGroup;
+			children = (
+				2F4C453E296BF72C009B944D /* Authentication */,
+			);
+			path = Usecase;
+			sourceTree = "<group>";
+		};
+		2F4C453E296BF72C009B944D /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
 		2F53835D29569A8300434575 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
@@ -349,6 +388,15 @@
 				2FBEB7A82955AEE90080EB42 /* SearchHeaderView.swift */,
 			);
 			path = "CustomHeader&Footer";
+			sourceTree = "<group>";
+		};
+		2F6361D32967F9AC00EE91AE /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				2F5EEDDC293E063500ACE5AE /* LoginViewController.swift */,
+				2F5EEDDD293E063500ACE5AE /* LoginViewController.xib */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 		2F6CE7E729586105008F855A /* Orders */ = {
@@ -380,6 +428,7 @@
 		2F7FF136293DCF3000775711 /* AppDATN */ = {
 			isa = PBXGroup;
 			children = (
+				2F4C453D296BF721009B944D /* Usecase */,
 				2F53835D29569A8300434575 /* Extension */,
 				2FF8CAC729544E5A00563C3C /* NetworkService */,
 				2F20501029518FBD00DCB9C9 /* Models */,
@@ -387,23 +436,25 @@
 				2F0C0C00294881F600A0B235 /* Customs */,
 				2F5EEDE0293E089A00ACE5AE /* CustomHeader&Footer */,
 				2F7FF14E293DCF9B00775711 /* Pages */,
-				2F7FF14B293DCF4900775711 /* Delegate */,
+				2F7FF14B293DCF4900775711 /* AppDelegate */,
 				2FBE790F29642BA9000E6B62 /* Validation */,
 				2F7FF140293DCF3400775711 /* Assets.xcassets */,
 				2F7FF142293DCF3400775711 /* LaunchScreen.storyboard */,
 				2F7FF145293DCF3400775711 /* Info.plist */,
+				2F6361D42967FED700EE91AE /* FormatNumber.swift */,
 			);
 			path = AppDATN;
 			sourceTree = "<group>";
 		};
-		2F7FF14B293DCF4900775711 /* Delegate */ = {
+		2F7FF14B293DCF4900775711 /* AppDelegate */ = {
 			isa = PBXGroup;
 			children = (
 				2F7FF137293DCF3000775711 /* AppDelegate.swift */,
 				2F7FF139293DCF3000775711 /* SceneDelegate.swift */,
 				2F051776296513D3009087EC /* Application.swift */,
+				2F26C64D2965BAE700DEA46A /* TabbarController.swift */,
 			);
-			path = Delegate;
+			path = AppDelegate;
 			sourceTree = "<group>";
 		};
 		2F7FF14E293DCF9B00775711 /* Pages */ = {
@@ -541,8 +592,7 @@
 		2FBE790829642ABE000E6B62 /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				2F5EEDDC293E063500ACE5AE /* LoginViewController.swift */,
-				2F5EEDDD293E063500ACE5AE /* LoginViewController.xib */,
+				2F6361D32967F9AC00EE91AE /* ViewController */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -638,6 +688,9 @@
 			children = (
 				2FF8CAC829544EBE00563C3C /* Route.swift */,
 				2FFA5ACC295470900007AB14 /* Method.swift */,
+				2F2B1F4029681997002AF4EC /* APIResponse.swift */,
+				2F2B1F42296819DF002AF4EC /* NetworkService.swift */,
+				2F4C453B296BEEA5009B944D /* AppError.swift */,
 			);
 			path = NetworkService;
 			sourceTree = "<group>";
@@ -680,6 +733,13 @@
 			packageProductDependencies = (
 				2F2BE6C4295729080007D323 /* Kingfisher */,
 				2F2BE6C72957297F0007D323 /* Cosmos */,
+				2F6361C32967D19700EE91AE /* RxBlocking */,
+				2F6361C52967D19700EE91AE /* RxCocoa */,
+				2F6361C72967D19700EE91AE /* RxSwift */,
+				2F6361C92967D19700EE91AE /* RxTest */,
+				2FF8952F296C0A56002A9258 /* Swinject */,
+				2FF89532296C0D8C002A9258 /* SnapKit */,
+				2FF89535296C0DFD002A9258 /* Alamofire */,
 			);
 			productName = AppDATN;
 			productReference = 2F7FF134293DCF3000775711 /* AppDATN.app */;
@@ -712,6 +772,10 @@
 			packageReferences = (
 				2F2BE6C3295729080007D323 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 				2F2BE6C62957297F0007D323 /* XCRemoteSwiftPackageReference "Cosmos" */,
+				2F6361C22967D19700EE91AE /* XCRemoteSwiftPackageReference "RxSwift" */,
+				2FF8952E296C0A56002A9258 /* XCRemoteSwiftPackageReference "Swinject" */,
+				2FF89531296C0D8C002A9258 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				2FF89534296C0DFD002A9258 /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			productRefGroup = 2F7FF135293DCF3000775711 /* Products */;
 			projectDirPath = "";
@@ -793,6 +857,8 @@
 				2FCDA03929530A740067CDC8 /* UserTableViewModel.swift in Sources */,
 				2F3152462951B91C00415E14 /* ProductViewCell.swift in Sources */,
 				2F2BE6BC295720F90007D323 /* ReviewViewController.swift in Sources */,
+				2F6361D52967FED700EE91AE /* FormatNumber.swift in Sources */,
+				2F2B1F43296819DF002AF4EC /* NetworkService.swift in Sources */,
 				2FD10F24293DDE7900A05661 /* StartModels.swift in Sources */,
 				2F2050212951AB5F00DCB9C9 /* CategoryHeader.swift in Sources */,
 				2F493B452941E3B800D169D5 /* CustomTextField.swift in Sources */,
@@ -808,6 +874,7 @@
 				2F5EEDE9293E35B600ACE5AE /* HomeSlideCell.swift in Sources */,
 				2F051777296513D3009087EC /* Application.swift in Sources */,
 				2F2B39CF29644D6D00C96FFB /* UserDefault+Extension.swift in Sources */,
+				2F26C64E2965BAE700DEA46A /* TabbarController.swift in Sources */,
 				2FF8CAC2295435A500563C3C /* ValidationTextField.swift in Sources */,
 				2F2BE6CA295740400007D323 /* RatingModel.swift in Sources */,
 				2F304C28293F193E00DB297F /* CartCell.swift in Sources */,
@@ -824,8 +891,10 @@
 				2FCDA02D2952E6D30067CDC8 /* CategoryViewController.swift in Sources */,
 				2F2050232951ACD700DCB9C9 /* CategoryHeaderView.swift in Sources */,
 				2F0C0BFE294864BE00A0B235 /* ProductCell.swift in Sources */,
+				2F2B1F4129681997002AF4EC /* APIResponse.swift in Sources */,
 				2FF8CAC929544EBE00563C3C /* Route.swift in Sources */,
 				2FD10F26293DDEF600A05661 /* StartSevice.swift in Sources */,
+				2F4C453C296BEEA5009B944D /* AppError.swift in Sources */,
 				2F20501229518FD200DCB9C9 /* SlideModel.swift in Sources */,
 				2F3152362951B2F700415E14 /* TopProductCell.swift in Sources */,
 				2FF8CAC629544D0600563C3C /* AuthManager.swift in Sources */,
@@ -962,6 +1031,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
@@ -1065,6 +1135,38 @@
 				kind = branch;
 			};
 		};
+		2F6361C22967D19700EE91AE /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+		2FF8952E296C0A56002A9258 /* XCRemoteSwiftPackageReference "Swinject" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Swinject/Swinject.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+		2FF89531296C0D8C002A9258 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		2FF89534296C0DFD002A9258 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1077,6 +1179,41 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 2F2BE6C62957297F0007D323 /* XCRemoteSwiftPackageReference "Cosmos" */;
 			productName = Cosmos;
+		};
+		2F6361C32967D19700EE91AE /* RxBlocking */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2F6361C22967D19700EE91AE /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxBlocking;
+		};
+		2F6361C52967D19700EE91AE /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2F6361C22967D19700EE91AE /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		2F6361C72967D19700EE91AE /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2F6361C22967D19700EE91AE /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+		2F6361C92967D19700EE91AE /* RxTest */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2F6361C22967D19700EE91AE /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxTest;
+		};
+		2FF8952F296C0A56002A9258 /* Swinject */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2FF8952E296C0A56002A9258 /* XCRemoteSwiftPackageReference "Swinject" */;
+			productName = Swinject;
+		};
+		2FF89532296C0D8C002A9258 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2FF89531296C0D8C002A9258 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		2FF89535296C0DFD002A9258 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2FF89534296C0DFD002A9258 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

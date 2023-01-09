@@ -40,14 +40,6 @@ class CartViewController: UIViewController {
         navigationController?.navigationBar.compactAppearance = appearance
         navigationController?.navigationBar.scrollEdgeAppearance = appearance
     }
-    func formatter(total: Int) -> String {
-        let formatter = NumberFormatter()
-        formatter.groupingSeparator = ","
-        formatter.numberStyle = .decimal
-        formatter.maximumFractionDigits = 2
-        formatter.decimalSeparator = "."
-        return formatter.string(for: total) ?? ""
-    }
     func checkItemCart() {
         if carts.count == 0 {
             showCartEmpty.isHidden = false
@@ -181,6 +173,41 @@ extension CartViewController: UITableViewDataSource {
 }
 
 extension CartViewController {
+    func deleteAllCart() {
+        let userId = UserDefaults.standard.value(forKey: "userid") ?? ""
+        let url = URL(string: "http://localhost:5000/api/cart/\(userId)")!
+        var request = URLRequest(url: url)
+        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.httpMethod = "DELETE"
+        let task = URLSession.shared.dataTask(with: request) { data, res, error in
+            if error != nil || data == nil {
+                    print("Client error!")
+                    return
+                }
+                guard let response = res as? HTTPURLResponse, (200...299).contains(response.statusCode) else {
+                    print("Server error!")
+                    return
+                }
+                guard let mime = response.mimeType, mime == "application/json" else {
+                    print("Wrong MIME type!")
+                    return
+                }
+                do {
+                    guard let data = data else {
+                        return
+                    }
+                    print("thanh cong")
+                    self.carts = []
+                    DispatchQueue.main.async {
+                        self.checkItemCart()
+                        self.tableView.reloadData()
+                    }
+                } catch {
+                    print("JSON error: \(error.localizedDescription)")
+                }
+        }
+        task.resume()
+    }
     func fetchDataCart() {
         let userId = UserDefaults.standard.value(forKey: "userid") ?? ""
         let url = URL(string: "http://localhost:5000/api/cart/find/\(userId)")!
@@ -224,8 +251,8 @@ extension CartViewController {
 extension CartViewController: CartCellDelegate {
     func subTotal(qty: Int, price: Int) {
         total += qty * price
-        self.subtotal.text = "\(formatter(total: total)) VND"
-        self.totalLb.text = "\(formatter(total: total)) VND"
+        self.subtotal.text = "\(FormatNumber.shared.formatter(total: total)) VND"
+        self.totalLb.text = "\(FormatNumber.shared.formatter(total: total)) VND"
     }
     func updateItemCart(qty: Int, cartId: String) {
         let url = URL(string: "http://localhost:5000/api/cart/\(cartId)")!
@@ -298,9 +325,7 @@ extension CartViewController {
                     }
                     let jsonDecoder = JSONDecoder()
                     let _ = try jsonDecoder.decode(CartModel.self, from: data)
-                    DispatchQueue.main.sync {
-                        print("Da xoa het")
-                    }
+                    self.deleteAllCart()
 
                 } catch {
                     print("JSON error: \(error.localizedDescription)")
