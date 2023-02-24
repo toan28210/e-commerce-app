@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PayFooterView" customModule="AppDATN" customModuleProvider="target">
+            <connections>
+                <outlet property="price" destination="4jw-xq-JTM" id="sda-9N-64C"/>
+                <outlet property="quantity" destination="FW5-1e-U33" id="Khd-ZA-oKo"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="486" height="96"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CaJ-x6-HHi">
+                    <rect key="frame" x="0.0" y="0.0" width="486" height="96"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="F89-gq-zcb">
+                            <rect key="frame" x="16" y="8" width="454" height="80"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Tổng số tiền  (1 sản phẩm):" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FW5-1e-U33">
+                                    <rect key="frame" x="0.0" y="31" width="181.33333333333334" height="18"/>
+                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="đ30.000" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4jw-xq-JTM">
+                                    <rect key="frame" x="392.33333333333331" y="31" width="61.666666666666686" height="18"/>
+                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                    <color key="textColor" systemColor="systemRedColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="F89-gq-zcb" firstAttribute="leading" secondItem="CaJ-x6-HHi" secondAttribute="leading" constant="16" id="ILf-Jh-YAK"/>
+                        <constraint firstItem="F89-gq-zcb" firstAttribute="top" secondItem="CaJ-x6-HHi" secondAttribute="top" constant="8" id="ZuK-4e-P5u"/>
+                        <constraint firstAttribute="trailing" secondItem="F89-gq-zcb" secondAttribute="trailing" constant="16" id="cHV-Rq-lbo"/>
+                        <constraint firstAttribute="bottom" secondItem="F89-gq-zcb" secondAttribute="bottom" constant="8" id="ndc-kg-c6w"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="CaJ-x6-HHi" secondAttribute="trailing" id="AEl-TO-Zgz"/>
+                <constraint firstItem="CaJ-x6-HHi" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="MaC-u7-D0E"/>
+                <constraint firstAttribute="bottom" secondItem="CaJ-x6-HHi" secondAttribute="bottom" id="aZu-cO-z7E"/>
+                <constraint firstItem="CaJ-x6-HHi" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="m6R-O0-OHZ"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="207.63358778625954" y="-245.77464788732397"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

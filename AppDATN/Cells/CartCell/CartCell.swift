@@ -71,7 +71,7 @@ extension CartCell {
                     print("price: \(json.price ?? 0)")
                     DispatchQueue.main.sync {
                         self.cartName.text = json.title
-                        self.cartPrice.text = "\(json.price ?? 0) VND * \(self.qty)"
+                        self.cartPrice.text = "\(json.formattedPrice) VND * \(self.qty)"
                         self.amoutLanbel.text = "\(self.qty)"
                         let url = URL(string: json.img ?? "")
                         self.cartImage.kf.setImage(with: url)

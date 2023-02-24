@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="146" id="KGk-i7-Jjw" customClass="ChosseAddressTableViewCell" customModule="AppDATN" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="540" height="146"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="540" height="146"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" tag="16" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BcO-Ng-Cai">
+                        <rect key="frame" x="16" y="16" width="508" height="114"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4MB-df-WH7">
+                                <rect key="frame" x="0.0" y="0.0" width="36" height="114"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FZ3-k4-4Md">
+                                        <rect key="frame" x="4" y="4" width="16" height="16"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="FZ3-k4-4Md" secondAttribute="height" id="9N4-gC-M1e"/>
+                                            <constraint firstAttribute="height" constant="16" id="a3O-GI-NKA"/>
+                                        </constraints>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" image="ic-radio"/>
+                                        <state key="selected" image="ic-radioed"/>
+                                        <connections>
+                                            <action selector="radioPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Hjl-5I-b4C"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="FZ3-k4-4Md" firstAttribute="leading" secondItem="4MB-df-WH7" secondAttribute="leading" constant="4" id="Qbw-Qp-2ev"/>
+                                    <constraint firstAttribute="trailing" secondItem="FZ3-k4-4Md" secondAttribute="trailing" constant="16" id="akw-wb-Ixe"/>
+                                    <constraint firstItem="FZ3-k4-4Md" firstAttribute="top" secondItem="4MB-df-WH7" secondAttribute="top" constant="4" id="iQq-E0-M2n"/>
+                                </constraints>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="Nqh-DU-9rA">
+                                <rect key="frame" x="36" y="0.0" width="422" height="114"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cyr-EE-OcO">
+                                        <rect key="frame" x="0.0" y="0.0" width="422" height="21"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Trần Thái Toản" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z6V-D5-y5D">
+                                                <rect key="frame" x="0.0" y="0.0" width="100.66666666666667" height="21"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="21" id="wV4-I2-AJ7"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="|" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9ti-UV-VNK">
+                                                <rect key="frame" x="108.66666666666666" y="0.0" width="4" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(+84) 961233036" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nl3-qu-dSD">
+                                                <rect key="frame" x="120.66666666666666" y="0.0" width="114" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
+                                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="9ti-UV-VNK" secondAttribute="bottom" id="0Uc-sq-Edc"/>
+                                            <constraint firstItem="Z6V-D5-y5D" firstAttribute="leading" secondItem="Cyr-EE-OcO" secondAttribute="leading" id="32o-Th-BMD"/>
+                                            <constraint firstAttribute="bottom" secondItem="Z6V-D5-y5D" secondAttribute="bottom" id="4Oi-rH-jsp"/>
+                                            <constraint firstItem="nl3-qu-dSD" firstAttribute="top" secondItem="Cyr-EE-OcO" secondAttribute="top" id="E6L-bF-opw"/>
+                                            <constraint firstItem="9ti-UV-VNK" firstAttribute="top" secondItem="Cyr-EE-OcO" secondAttribute="top" id="E7b-ar-nDr"/>
+                                            <constraint firstItem="Z6V-D5-y5D" firstAttribute="top" secondItem="Cyr-EE-OcO" secondAttribute="top" id="I0f-kb-wCe"/>
+                                            <constraint firstAttribute="bottom" secondItem="nl3-qu-dSD" secondAttribute="bottom" id="Rll-Ok-tum"/>
+                                            <constraint firstItem="9ti-UV-VNK" firstAttribute="leading" secondItem="Z6V-D5-y5D" secondAttribute="trailing" constant="8" id="WHN-vR-olr"/>
+                                            <constraint firstItem="nl3-qu-dSD" firstAttribute="leading" secondItem="9ti-UV-VNK" secondAttribute="trailing" constant="8" id="rnn-Gi-4Pa"/>
+                                        </constraints>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Trường quốc tế Aic Đại Tự Thanh, Khương Thuận Thành" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k9O-rD-aue">
+                                        <rect key="frame" x="0.0" y="32.666666666666664" width="422" height="17"/>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Xã THanh Khương, Huyện Thuận Thành, Bắc Ninh" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KZv-oR-bLc">
+                                        <rect key="frame" x="0.0" y="61.333333333333329" width="422" height="17"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="17" id="ZMq-9U-Dd1"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="13"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ztc-sk-f0c">
+                                        <rect key="frame" x="0.0" y="90" width="422" height="24"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f8x-ZU-Mh8">
+                                                <rect key="frame" x="0.0" y="0.0" width="75" height="24"/>
+                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
+                                                <inset key="contentEdgeInsets" minX="8" minY="0.0" maxX="8" maxY="0.0"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="Mặc định">
+                                                    <color key="titleColor" systemColor="systemRedColor"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWith">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" systemColor="systemRedColor"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="f8x-ZU-Mh8" firstAttribute="leading" secondItem="ztc-sk-f0c" secondAttribute="leading" id="3g6-Fr-dzB"/>
+                                            <constraint firstAttribute="height" constant="24" id="8wb-Ul-mdc"/>
+                                            <constraint firstItem="f8x-ZU-Mh8" firstAttribute="top" secondItem="ztc-sk-f0c" secondAttribute="top" id="PQ9-ea-McT"/>
+                                            <constraint firstAttribute="bottom" secondItem="f8x-ZU-Mh8" secondAttribute="bottom" id="fzf-n8-2Ko"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HSG-As-fF7">
+                                <rect key="frame" x="458" y="0.0" width="50" height="114"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MPB-yi-BRm">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="17"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="fkJ-1b-aBS"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
+                                        <inset key="contentEdgeInsets" minX="12" minY="0.0" maxX="12" maxY="0.0"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Sửa">
+                                            <color key="titleColor" systemColor="systemRedColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="updateAddressPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="3ls-iA-PtQ"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="MPB-yi-BRm" secondAttribute="trailing" id="MSH-DP-ZhE"/>
+                                    <constraint firstItem="MPB-yi-BRm" firstAttribute="leading" secondItem="HSG-As-fF7" secondAttribute="leading" id="Pz2-2Y-51J"/>
+                                    <constraint firstItem="MPB-yi-BRm" firstAttribute="top" secondItem="HSG-As-fF7" secondAttribute="top" id="o7G-l7-yYB"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="BcO-Ng-Cai" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="5Zx-IE-Pye"/>
+                    <constraint firstItem="BcO-Ng-Cai" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="DaT-P8-cjJ"/>
+                    <constraint firstAttribute="trailing" secondItem="BcO-Ng-Cai" secondAttribute="trailing" constant="16" id="VSN-Zb-IRp"/>
+                    <constraint firstAttribute="bottom" secondItem="BcO-Ng-Cai" secondAttribute="bottom" constant="16" id="rR8-W7-gxU"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="addressLabel" destination="KZv-oR-bLc" id="tGA-pD-qEc"/>
+                <outlet property="duongLabel" destination="k9O-rD-aue" id="YC5-B1-w4z"/>
+                <outlet property="nameLabel" destination="Z6V-D5-y5D" id="5My-0Z-uLe"/>
+                <outlet property="phoneLabel" destination="nl3-qu-dSD" id="wce-CA-gm3"/>
+                <outlet property="radioButton" destination="FZ3-k4-4Md" id="kpo-nz-OmC"/>
+                <outlet property="statusView" destination="ztc-sk-f0c" id="4ZR-d2-3mj"/>
+                <outlet property="updateAddress" destination="MPB-yi-BRm" id="Tq1-2A-T66"/>
+            </connections>
+            <point key="canvasLocation" x="306.87022900763355" y="56.338028169014088"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="ic-radio" width="24" height="24"/>
+        <image name="ic-radioed" width="24" height="24"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

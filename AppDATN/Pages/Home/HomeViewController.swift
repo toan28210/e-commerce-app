@@ -12,6 +12,7 @@ class HomeViewController: UIViewController {
     @IBOutlet private weak var collectionView: UICollectionView!
     
     var products: [ProductModel] = []
+    private let viewModel = HomeViewModel()
     
     let flowLayout: UICollectionViewFlowLayout = {
         let layout = UICollectionViewFlowLayout()
@@ -23,14 +24,25 @@ class HomeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationController?.isNavigationBarHidden = true
-        tabBarController?.tabBar.isHidden = false
         configureCollectonView()
         getDataProducts()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        navigationController?.isNavigationBarHidden = true
+
+    }
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        let textField = CustomTextField(frame: CGRect(x: 0, y: 0, width: (self.navigationController?.navigationBar.frame.width)!, height: 35))
+        textField.leftImage = UIImage(systemName: "magnifyingglass")
+        textField.leftPadding = 16
+        textField.borderStyle = .roundedRect
+        textField.backgroundColor = UIColor.white.withAlphaComponent(0.5)
+        textField.tintColor = UIColor.lightGray
+        textField.placeholder = "Search..."
+        navigationItem.titleView = textField
         navigationController?.isNavigationBarHidden = true
         tabBarController?.tabBar.isHidden = false
     }
@@ -46,46 +58,24 @@ class HomeViewController: UIViewController {
         collectionView.register(CategoryCell.nib(), forCellWithReuseIdentifier: CategoryCell.identifier)
         collectionView.register(TopProductCell.nib(), forCellWithReuseIdentifier: TopProductCell.identifier)
         collectionView.register(ProductCell.nib(), forCellWithReuseIdentifier: ProductCell.identifier)
-        collectionView.register(CategoryHeaderView.self,
+        collectionView.register(CustomHomeHeaderView.self,
                                     forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader,
-                                    withReuseIdentifier: CategoryHeaderView.identifier)
+                                    withReuseIdentifier: CustomHomeHeaderView.identifier)
     }
     
     private func getDataProducts() {
-        let url = URL(string: "http://localhost:5000/api/products")!
-        var request = URLRequest(url: url)
-        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
-        request.httpMethod = "GET"
-        let task = URLSession.shared.dataTask(with: request) { data, res, error in
-            if error != nil || data == nil {
-                    print("Client error!")
-                    return
+        viewModel.getProducts { [weak self] results in
+            switch results {
+            case .success(let products):
+                guard let self = self else {return}
+                DispatchQueue.main.async {
+                    self.products = products
+                    self.collectionView.reloadData()
                 }
-                guard let response = res as? HTTPURLResponse, (200...299).contains(response.statusCode) else {
-                    print("Server error!")
-                    return
-                }
-                guard let mime = response.mimeType, mime == "application/json" else {
-                    print("Wrong MIME type!")
-                    return
-                }
-                do {
-                    guard let data = data else {
-                        return
-                    }
-//                    let json = try JSONSerialization.jsonObject(with: data, options: [])
-                    let jsonDecoder = JSONDecoder()
-                    let json = try jsonDecoder.decode([ProductModel].self, from: data)
-                    self.products = json
-                    DispatchQueue.main.async {
-                        self.collectionView.reloadData()
-                    }
-                    print(json)
-                } catch {
-                    print("JSON error: \(error.localizedDescription)")
-                }
+            case .failure(let error):
+                print(error)
+            }
         }
-        task.resume()
     }
 }
 
@@ -133,11 +123,10 @@ extension HomeViewController: UICollectionViewDataSource {
                         at indexPath: IndexPath) -> UICollectionReusableView {
         guard let header = collectionView.dequeueReusableSupplementaryView(
             ofKind: UICollectionView.elementKindSectionHeader,
-            withReuseIdentifier: CategoryHeaderView.identifier,
-            for: indexPath) as? CategoryHeaderView else {
-            return CategoryHeaderView()
+            withReuseIdentifier: CustomHomeHeaderView.identifier,
+            for: indexPath) as? CustomHomeHeaderView else {
+            return CustomHomeHeaderView()
         }
-        header.superView.namHeaedr.text = "Products"
         return header
     }
     func collectionView(_ collectionView: UICollectionView,
@@ -146,6 +135,12 @@ extension HomeViewController: UICollectionViewDataSource {
         if section == 3 {
             return CGSize(width: collectionView.frame.width, height: 50)
         } else {return CGSize(width: 0, height: 0)}
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let detail = ProductDetailViewController()
+        detail.product = products[indexPath.row]
+        navigationController?.pushViewController(detail, animated: true)
     }
     
 }
@@ -191,7 +186,7 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDelegate
 extension HomeViewController: CategoryCellDelegate {
     func getProductFollowCat(catId: String, title: String) {
         let productVC = ProductViewController()
-        productVC.getProductCat(catId: catId)
+        productVC.getProductCat(cat: catId)
         productVC.title = title
         navigationController?.pushViewController(productVC, animated: true)
     }

@@ -6,7 +6,6 @@
 //
 
 import Foundation
-
 struct ProductModel: Decodable {
     let _id: String?
     let title: String?
@@ -27,7 +26,7 @@ struct ProductModel: Decodable {
     let __v: Int?
     
     var formattedPrice: String {
-        return "\(FormatNumber.shared.formatter(total: price ?? 0)) calories"
+        return "\(FormatNumber.shared.formatter(total: price ?? 0))"
     }
 }
 

@@ -2,8 +2,10 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -16,31 +18,49 @@
                 <rect key="frame" x="0.0" y="0.0" width="167" height="175"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="dOS-Fs-jru">
-                        <rect key="frame" x="33.666666666666657" y="0.0" width="100" height="175"/>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WNd-S4-lms">
+                        <rect key="frame" x="0.0" y="0.0" width="167" height="175"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="woS-tS-scw">
-                                <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="100" id="Mj2-Kf-wos"/>
-                                    <constraint firstAttribute="height" constant="100" id="sSE-TG-cgV"/>
-                                </constraints>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W35-iq-uS5">
-                                <rect key="frame" x="0.0" y="108" width="100" height="67"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="dOS-Fs-jru">
+                                <rect key="frame" x="0.0" y="0.0" width="167" height="175"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="woS-tS-scw">
+                                        <rect key="frame" x="33.666666666666657" y="0.0" width="100" height="100"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="Vkk-Hm-gG6"/>
+                                            <constraint firstAttribute="width" secondItem="woS-tS-scw" secondAttribute="height" id="lFg-q2-tRr"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="50"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W35-iq-uS5">
+                                        <rect key="frame" x="68" y="108" width="31" height="67"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                         </subviews>
-                    </stackView>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="dOS-Fs-jru" firstAttribute="top" secondItem="WNd-S4-lms" secondAttribute="top" id="7ur-eK-27v"/>
+                            <constraint firstAttribute="trailing" secondItem="dOS-Fs-jru" secondAttribute="trailing" id="VWN-bh-bjd"/>
+                            <constraint firstAttribute="bottom" secondItem="dOS-Fs-jru" secondAttribute="bottom" id="lrY-cs-1oA"/>
+                            <constraint firstItem="dOS-Fs-jru" firstAttribute="leading" secondItem="WNd-S4-lms" secondAttribute="leading" id="tkj-s8-o4F"/>
+                        </constraints>
+                    </view>
                 </subviews>
             </view>
-            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <viewLayoutGuide key="safeArea" id="LqS-iO-HTH"/>
             <constraints>
-                <constraint firstItem="dOS-Fs-jru" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="QcM-4v-Dur"/>
-                <constraint firstItem="dOS-Fs-jru" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="U2o-fj-ZFT"/>
-                <constraint firstAttribute="bottom" secondItem="dOS-Fs-jru" secondAttribute="bottom" id="yVI-wE-Kjb"/>
+                <constraint firstAttribute="bottom" secondItem="WNd-S4-lms" secondAttribute="bottom" id="4S4-gf-jNL"/>
+                <constraint firstItem="WNd-S4-lms" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="FqV-rE-8XI"/>
+                <constraint firstItem="WNd-S4-lms" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="c8d-lD-MLw"/>
+                <constraint firstAttribute="trailing" secondItem="WNd-S4-lms" secondAttribute="trailing" id="oCc-Ey-IzI"/>
             </constraints>
             <size key="customSize" width="167" height="175"/>
             <connections>
@@ -50,4 +70,9 @@
             <point key="canvasLocation" x="226.71755725190837" y="-63.028169014084511"/>
         </collectionViewCell>
     </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

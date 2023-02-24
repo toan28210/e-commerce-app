@@ -18,7 +18,7 @@ class AddReviewViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.isNavigationBarHidden = false
-        title = "Write Reviews"
+        title = "Viết đánh về sản phẩm"
         tabBarController?.tabBar.isHidden = true
         cosmosView.settings.fillMode = .full
     }

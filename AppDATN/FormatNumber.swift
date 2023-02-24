@@ -13,7 +13,7 @@ class FormatNumber {
     
     func formatter(total: Int) -> String {
         let formatter = NumberFormatter()
-        formatter.groupingSeparator = ","
+        formatter.groupingSeparator = "."
         formatter.numberStyle = .decimal
         formatter.maximumFractionDigits = 2
         formatter.decimalSeparator = "."

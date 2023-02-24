@@ -18,8 +18,6 @@ class CategoryItemCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        imageView.layer.cornerRadius = imageView.frame.width/2
-        print("\(imageView.frame.width) voi \(imageView.frame.height)")
     }
     func configureCollectionView(with data: CategoryModel) {
         let url = URL(string: data.img ?? "")!

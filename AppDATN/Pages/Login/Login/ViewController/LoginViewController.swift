@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import RxCocoa
+import RxSwift
 
 class LoginViewController: UIViewController {
     @IBOutlet weak var loginView: UIView!
@@ -13,6 +15,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var loginBtn: UIButton!
     @IBOutlet weak var passTextField: CustomTextField!
     @IBOutlet weak var rememberBtn: UIButton!
+    @IBOutlet weak var checkBoxImage: UIImageView!
     let userDefault = UserDefaults.standard
     var email: String {
         get {
@@ -36,7 +39,6 @@ class LoginViewController: UIViewController {
         userDefault.setValue(true, forKey: "checkNewUser")
         setupView()
         checkboxRemember()
-        setImageBtn()
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -86,35 +88,34 @@ class LoginViewController: UIViewController {
         request.httpBody = bodyData
         let task = URLSession.shared.dataTask(with: request) { data, res, error in
             if error != nil || data == nil {
-                    print("Client error!")
+                return
+            }
+            guard let response = res as? HTTPURLResponse, (200...299).contains(response.statusCode) else {
+                print("Server error!")
+                return
+            }
+            guard let mime = response.mimeType, mime == "application/json" else {
+                print("Wrong MIME type!")
+                return
+            }
+            do {
+                guard let data = data else {
                     return
                 }
-                guard let response = res as? HTTPURLResponse, (200...299).contains(response.statusCode) else {
-                    print("Server error!")
-                    return
+                let jsonDecoder = JSONDecoder()
+                let json = try jsonDecoder.decode(UserModel.self, from: data)
+                self.userDefault.set(json._id, forKey: "userid")
+                self.userDefault.set(json.username, forKey: "username")
+                self.userDefault.set(json.email, forKey: "useremail")
+                DispatchQueue.main.async {
+                    let home = TabbarController.shared.tabbar()
+                    self.navigationController?.pushViewController(home, animated: true)
+                    //                        Application.shared.setupMainInterface()
                 }
-                guard let mime = response.mimeType, mime == "application/json" else {
-                    print("Wrong MIME type!")
-                    return
-                }
-                do {
-                    guard let data = data else {
-                        return
-                    }
-                    let jsonDecoder = JSONDecoder()
-                    let json = try jsonDecoder.decode(UserModel.self, from: data)
-                    self.userDefault.set(json._id, forKey: "userid")
-                    self.userDefault.set(json.username, forKey: "username")
-                    self.userDefault.set(json.email, forKey: "useremail")
-                    DispatchQueue.main.async {
-                        let home = TabbarController.shared.tabbar()
-                        self.navigationController?.pushViewController(home, animated: true)
-//                        Application.shared.setupMainInterface()
-                    }
-
-                } catch {
-                    print("JSON error: \(error.localizedDescription)")
-                }
+                
+            } catch {
+                print("JSON error: \(error.localizedDescription)")
+            }
         }
         task.resume()
     }
@@ -124,10 +125,6 @@ extension LoginViewController {
     func setupView() {
         emailTextField.borderStyle = .none
         passTextField.borderStyle = .none
-    }
-    func setImageBtn() {
-        rememberBtn.setImage(UIImage(named: "img-uncheck-image"), for: .normal)
-        rememberBtn.setImage(UIImage(named: "img-check-image"), for: .selected)
     }
     
     func checkboxRemember() {

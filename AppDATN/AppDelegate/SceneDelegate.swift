@@ -24,7 +24,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             let navigation = UINavigationController(rootViewController: home)
             home.tabBarItem = UITabBarItem(title: "", image: UIImage(named: "img-home-image"), tag: 0)
             // Gio hang
-            let far = FavoritesViewController()
+            let far = FavViewController()
             let farNavi = UINavigationController(rootViewController: far)
             far.tabBarItem = UITabBarItem(title: "", image: UIImage(named: "ima-myFav-image"), tag: 1)
             //user

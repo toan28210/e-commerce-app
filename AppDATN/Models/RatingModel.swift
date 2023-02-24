@@ -13,4 +13,5 @@ struct RatingModel: Decodable {
     let productId: String?
     let rating: Double?
     let response: String?
+    let createdAt: String?
 }

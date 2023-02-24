@@ -43,7 +43,7 @@ extension ProductViewCell: UICollectionViewDelegate, UICollectionViewDelegateFlo
         let spacing: CGFloat = flowLayout.minimumInteritemSpacing
         let availableWidth = width - spacing * (numberOfItemsPerRow + 1)
         let itemDimension = floor(availableWidth / numberOfItemsPerRow)
-        return CGSize(width: itemDimension, height: 300)
+        return CGSize(width: itemDimension, height: 350)
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
         return CGSize(width: collectionView.frame.width, height: 50)

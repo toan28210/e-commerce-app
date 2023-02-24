@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeHeaderView" customModule="AppDATN" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="373"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YQq-U6-1Yk">
+                    <rect key="frame" x="0.0" y="0.0" width="393" height="373"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tất cả sản phẩm" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pAG-RZ-2qJ">
+                            <rect key="frame" x="16.000000000000007" y="176" width="124.66666666666669" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BOx-Ox-bYP">
+                            <rect key="frame" x="357" y="175.66666666666666" width="20" height="22"/>
+                            <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" image="arrow.right" catalog="system"/>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="BOx-Ox-bYP" firstAttribute="centerY" secondItem="YQq-U6-1Yk" secondAttribute="centerY" id="2Xb-R7-NUJ"/>
+                        <constraint firstAttribute="trailing" secondItem="BOx-Ox-bYP" secondAttribute="trailing" constant="16" id="JrD-UH-n2V"/>
+                        <constraint firstItem="pAG-RZ-2qJ" firstAttribute="centerY" secondItem="YQq-U6-1Yk" secondAttribute="centerY" id="he3-77-r1L"/>
+                        <constraint firstItem="pAG-RZ-2qJ" firstAttribute="leading" secondItem="YQq-U6-1Yk" secondAttribute="leading" constant="16" id="vOm-GZ-f1I"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="YQq-U6-1Yk" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="J0H-fQ-JpB"/>
+                <constraint firstAttribute="bottom" secondItem="YQq-U6-1Yk" secondAttribute="bottom" id="OZ2-qm-FgX"/>
+                <constraint firstAttribute="trailing" secondItem="YQq-U6-1Yk" secondAttribute="trailing" id="UJd-NB-qSp"/>
+                <constraint firstItem="YQq-U6-1Yk" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="s4K-Vp-W7C"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="151.90839694656489" y="-146.12676056338029"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="arrow.right" catalog="system" width="128" height="95"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

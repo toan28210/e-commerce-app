@@ -53,9 +53,9 @@ class AddRCell: UITableViewCell {
         phoneLb.text = "\(address.phone ?? 0)"
         nameTxt.text = address.name ?? ""
         AddressTxt.text = address.address ?? ""
-        cityTxt.text = address.city ?? ""
-        countryTxt.text = address.country ?? ""
-        zipcodeTxt.text = address.zipcode ?? ""
+//        cityTxt.text = address.city ?? ""
+//        countryTxt.text = address.country ?? ""
+//        zipcodeTxt.text = address.zipcode ?? ""
         phoneTxt.text = "\(address.phone ?? 0)"
     }
     

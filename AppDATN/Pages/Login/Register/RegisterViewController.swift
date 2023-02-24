@@ -10,9 +10,9 @@ import UIKit
 class RegisterViewController: UIViewController {
     @IBOutlet weak var createView: UIView!
     @IBOutlet weak var registerBtn: UIButton!
-    @IBOutlet weak var usernameTextField: CustomTextField!
-    @IBOutlet weak var emailTextField: CustomTextField!
-    @IBOutlet weak var passTextField: CustomTextField!
+    @IBOutlet weak var usernameTextField: UITextField!
+    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var passTextField: UITextField!
     @IBOutlet weak var presentLogin: UILabel!
     let userDefault = UserDefaults.standard
     var username: String {
@@ -113,7 +113,7 @@ class RegisterViewController: UIViewController {
                     self.userDefault.set(json.username, forKey: "userename")
                     self.userDefault.set(json.email, forKey: "useremail")
                     DispatchQueue.main.async {
-                        let home = HomeViewController()
+                        let home = LoginViewController()
                         self.navigationController?.pushViewController(home, animated: true)
                     }
                 } catch {

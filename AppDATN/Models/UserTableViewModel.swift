@@ -16,13 +16,11 @@ class UserTableViewService {
     static let shared = UserTableViewService()
     func getDatas() -> [UserTableViewModel] {
         return [
-            UserTableViewModel(icon: "img-about-image", title: "Abount me"),
-            UserTableViewModel(icon: "img-myOder-image", title: "My orders"),
-            UserTableViewModel(icon: "ima-myFav-image", title: "My Favorites"),
-            UserTableViewModel(icon: "img-address-image", title: "My Address"),
-            UserTableViewModel(icon: "img-cre-image", title: "Credit Cards"),
-            UserTableViewModel(icon: "img-tran-image", title: "Transactions"),
-            UserTableViewModel(icon: "img-noti-image", title: "Notifications"),
+            UserTableViewModel(icon: "img-about-image", title: "Thiết lập tài khoản"),
+            UserTableViewModel(icon: "img-myOder-image", title: "Lịch sử mua hàng"),
+            UserTableViewModel(icon: "ima-myFav-image", title: "Đã thích"),
+            UserTableViewModel(icon: "img-tran-image", title: "Giao dịch"),
+            UserTableViewModel(icon: "img-noti-image", title: "Thông báo"),
             UserTableViewModel(icon: "img-signout-image", title: "Sign out"),
         ]
     }

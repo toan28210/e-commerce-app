@@ -13,7 +13,7 @@ class MyOrderViewController: UIViewController {
     lazy var orders: [OrderModel] = []
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "My Order"
+        title = "Lịch sử mua hàng"
         navigationController?.isNavigationBarHidden = false
         fetchOrder()
         configure()
@@ -24,13 +24,18 @@ class MyOrderViewController: UIViewController {
         orderTableView.dataSource = self
     }
     func registerCell() {
-        orderTableView.register(OrderCell.nib(), forCellReuseIdentifier: OrderCell.identifier)
+        orderTableView.register(OrderTableViewCell.nib(), forCellReuseIdentifier: OrderTableViewCell.identifier)
     }
 }
 
 extension MyOrderViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableView.automaticDimension
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let orderDetail = OrderDetailViewController(order: orders[indexPath.row])
+        self.navigationController?.pushViewController(orderDetail, animated: true)
+        
     }
 }
 extension MyOrderViewController: UITableViewDataSource {
@@ -39,11 +44,12 @@ extension MyOrderViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: OrderCell.identifier, for: indexPath) as? OrderCell else {
-            return OrderCell()
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: OrderTableViewCell.identifier, for: indexPath) as? OrderTableViewCell else {
+            return OrderTableViewCell()
         }
-        cell.configure(order: orders[indexPath.row])
-        cell.delegate = self
+        print(orders)
+        cell.configUI(order: orders[indexPath.row])
+//        cell.delegate = self
         return cell
     }
 }
@@ -81,6 +87,7 @@ extension MyOrderViewController {
                     let jsonDecoder = JSONDecoder()
                     let json = try jsonDecoder.decode([OrderModel].self, from: data)
                     self.orders = json
+                    print("oder",json)
                     var i = 0
                     for order in self.orders {
                         self.fetchOrderDetail(orderId: order._id ?? "", index: i)
@@ -116,10 +123,12 @@ extension MyOrderViewController {
                     }
                     let jsonDecoder = JSONDecoder()
                     let json = try jsonDecoder.decode([OrderDetailModel].self, from: data)
+                    print("json duoi",json)
                     self.orders[index].details = json
                     DispatchQueue.main.async {
                         self.orderTableView.reloadData()
                     }
+                    
                 } catch {
                     print("JSON error: \(error.localizedDescription)")
                 }

@@ -28,7 +28,7 @@ class ProductCell: UICollectionViewCell {
     func configure(with data: ProductModel) {
         let url = URL(string: data.img ?? "")!
         productImage.kf.setImage(with: url)
-        productPrice.text = "\(data.price ?? 0) VND"
+        productPrice.text = "\(data.formattedPrice) VND"
         productName.text = data.title ?? ""
         let userId = "\(UserDefaults.standard.value(forKey: "userid") ?? "")"
         checkUserLike(userId: userId, productId: data._id ?? "")

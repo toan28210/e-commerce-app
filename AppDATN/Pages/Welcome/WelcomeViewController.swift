@@ -19,21 +19,19 @@ class WelcomeViewController: UIViewController {
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        navigationController?.isNavigationBarHidden = false
+        navigationController?.isNavigationBarHidden = true
     }
     @IBAction func loginWithGoogle(_ sender: Any) {
         print("123")
     }
     @IBAction func createAccount(_ sender: UIButton) {
         let createAccount = RegisterViewController()
-        createAccount.modalPresentationStyle = .fullScreen
-        self.present(createAccount, animated: true)
+        self.navigationController?.pushViewController(createAccount, animated: true)
     }
 }
 // MARK: - Setup View
 extension WelcomeViewController {
     private func setupNavigation() {
-        title = "Welcome"
         navigationController?.navigationBar.tintColor = .black
     }
     private func setupView() {

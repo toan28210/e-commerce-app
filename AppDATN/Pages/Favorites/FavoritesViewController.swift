@@ -8,12 +8,14 @@
 import UIKit
 
 class FavoritesViewController: UIViewController {
+    
     @IBOutlet weak var farTableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = "Favorites"
-        configureTableView()
-        registerCell()
+//        configureTableView()
+//        registerCell()
     }
     private func configureTableView() {
         farTableView.delegate = self

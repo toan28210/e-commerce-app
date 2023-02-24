@@ -38,13 +38,11 @@
                     <constraints>
                         <constraint firstAttribute="height" constant="60" id="4fx-4K-70u"/>
                     </constraints>
-                    <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="18"/>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                    <state key="normal" title="Get start"/>
-                    <buttonConfiguration key="configuration" style="plain" title="Next">
-                        <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="20"/>
-                        <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </buttonConfiguration>
+                    <state key="normal" title="Tếp">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                             <real key="value" value="8"/>

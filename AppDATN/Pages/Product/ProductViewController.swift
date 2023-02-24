@@ -25,8 +25,8 @@ class ProductViewController: UIViewController {
         configureCollectionView()
         registerCell()
     }
-    func getProductCat(catId: String) {
-        let url = URL(string: "http://localhost:5000/api/products?category=\(catId)")!
+    func getProductCat(cat: String) {
+        let url = URL(string: "http://localhost:5000/api/products?category=\(cat)")!
         var request = URLRequest(url: url)
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         request.httpMethod = "GET"

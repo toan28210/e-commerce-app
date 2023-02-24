@@ -117,7 +117,7 @@ extension TopProductCell: UICollectionViewDataSource {
             for: indexPath) as? CategoryHeaderView else {
             return UICollectionReusableView()
         }
-        header.superView.namHeaedr.text = "Product"
+        header.superView.namHeaedr.text = "Khuyến nghị sản phẩm"
         return header
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {

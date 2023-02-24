@@ -10,7 +10,82 @@ import Foundation
 struct NetworkService {
     static let shared = NetworkService()
     
-    private init() {}  
+    private init() {}
+    
+    func loginUser(email: String, password: String, completion: @escaping(Result<UserModel, Error>) -> Void) {
+        let params = [
+            "email": email,
+            "password": password
+        ]
+        reques(route: .signin, method: .post, parameters: params, completion: completion)
+    }
+    func getUser(userId: String, completion: @escaping(Result<UserModel, Error>) -> Void) {
+        reques(route: .getUser(userId), method: .get, completion: completion)
+    }
+    
+    func getAllProduct(completion: @escaping(Result<[ProductModel], Error>) -> Void) {
+        reques(route: .getAllProduct, method: .get, completion: completion)
+    }
+    
+    func checkLike(userId: String, productId: String, completion: @escaping(Result<LikeModel,Error>) -> Void) {
+        let params = [
+            "userId": userId,
+            "productId": productId
+        ]
+        reques(route: .checkLike, method: .post , parameters: params, completion: completion)
+    }
+    func addCart(userId: String, productId: String, completion: @escaping(Result<CartModel, Error>) -> Void) {
+        let params = [
+            "userId": userId,
+            "productId": productId
+        ]
+        reques(route: .addCard, method: .post, parameters: params, completion: completion)
+    }
+    func checkProductToCart(userId: String, productId: String, completion: @escaping(Result<CartModel, Error>) -> Void) {
+        let params = [
+            "userId": userId,
+            "productId": productId
+        ]
+        reques(route: .checkProductToCart, method: .post, parameters: params, completion: completion)
+    }
+    
+    func like(userId: String, productId: String, completion: @escaping(Result<LikeModel, Error>) -> Void) {
+        let params = [
+            "userId": userId,
+            "productId": productId
+        ]
+        reques(route: .like, method: .post, parameters: params, completion: completion)
+    }
+    
+    func updateLikeProduct(productId: String, numberLike: Int, completion: @escaping(Result<ProductModel, Error>) -> Void) {
+        let params = [
+            "like": numberLike
+        ]
+        reques(route: .updateLikeProduct(productId), method: .patch, parameters: params, completion: completion)
+    }
+    
+    func checkOut(userId: String, total: Int, address: String, completion: @escaping(Result<OrderModel, Error>)-> Void) {
+        let params: [String: Any] = [
+            "userId": userId,
+            "amount": total,
+            "address": address
+        ]
+        reques(route: .checkOut, method: .post, parameters: params, completion: completion)
+    }
+    
+    func getDataCart(userId: String, completion: @escaping(Result<[CartModel], Error>) -> Void) {
+        reques(route: .getDataCart(userId), method: .get, completion: completion)
+    }
+    
+    func addOrderDetail(orderId: String, productId: String, quantity: Int, completion: @escaping(Result<CartModel, Error>) -> Void ) {
+        let params: [String: Any] = [
+            "orderId": orderId,
+            "productId": productId,
+            "quantity": quantity
+        ]
+        reques(route: .addOrderDetail, method: .post, parameters: params, completion: completion)
+    }
+    
     func reques<T: Decodable>(route: Route, method: Method, parameters: [String: Any]? = nil, completion: @escaping(Result<T, Error>) -> Void) {
         guard let request = createRequest(route: route, method: method, parameters: parameters) else {
             completion(.failure(AppError.unknownError))
@@ -39,25 +114,14 @@ struct NetworkService {
             completion(.failure(AppError.unknownError))
             return
         }
-        
         switch result {
         case .success(let data):
             let decoder = JSONDecoder()
-            guard let response = try? decoder.decode(ApiResponse<T>.self, from: data) else {
+            guard let response = try? decoder.decode(T.self, from: data) else {
                 completion(.failure(AppError.errorDecoding))
                 return
             }
-            
-            if let error = response.error {
-                completion(.failure(AppError.serverError(error)))
-                return
-            }
-            
-            if let decodedData = response.data {
-                completion(.success(decodedData))
-            } else {
-                completion(.failure(AppError.unknownError))
-            }
+            completion(.success(response))
         case .failure(let error):
             completion(.failure(error))
         }

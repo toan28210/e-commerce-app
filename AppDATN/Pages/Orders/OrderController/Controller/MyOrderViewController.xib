@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -15,22 +16,22 @@
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="nAC-qN-LT9">
-                    <rect key="frame" x="16" y="75" width="343" height="576"/>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="nAC-qN-LT9">
+                    <rect key="frame" x="0.0" y="59" width="393" height="759"/>
                     <color key="backgroundColor" red="0.95686274509803915" green="0.96078431372549022" blue="0.97647058823529409" alpha="1" colorSpace="calibratedRGB"/>
-                    <color key="sectionIndexBackgroundColor" red="0.95686274509803915" green="0.96078431372549022" blue="0.97647058823529409" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="sectionIndexBackgroundColor" red="0.55558788961965822" green="0.55954930671636349" blue="0.57143355800647933" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 </tableView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <color key="backgroundColor" red="0.95686274509803915" green="0.96078431372549022" blue="0.97647058823529409" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstItem="nAC-qN-LT9" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="16" id="3bo-Eg-5wC"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="nAC-qN-LT9" secondAttribute="bottom" constant="16" id="7tg-J9-hyn"/>
-                <constraint firstItem="nAC-qN-LT9" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="HBP-Kk-VzH"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="nAC-qN-LT9" secondAttribute="trailing" constant="16" id="nlD-ta-2h0"/>
+                <constraint firstItem="nAC-qN-LT9" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="3bo-Eg-5wC"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="nAC-qN-LT9" secondAttribute="bottom" id="7tg-J9-hyn"/>
+                <constraint firstItem="nAC-qN-LT9" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="HBP-Kk-VzH"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="nAC-qN-LT9" secondAttribute="trailing" id="nlD-ta-2h0"/>
             </constraints>
             <point key="canvasLocation" x="140" y="21"/>
         </view>

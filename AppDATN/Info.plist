@@ -2,6 +2,8 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>MKDirectionsApplicationSupportedModes</key>
+	<array/>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
@@ -19,5 +21,16 @@
 			</array>
 		</dict>
 	</dict>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>Bạn cần cài này để sử dụng một số chức năng của ứng dụng</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>Bạn cần cài này để sử dụng một số chức năng của ứng dụng</string>
+    <key>NSLocationWhenInUseUsageDescription</key>
+    <string>Do you allow this app to know your current location?</string>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>fetch</string>
+		<string>location</string>
+	</array>
 </dict>
 </plist>

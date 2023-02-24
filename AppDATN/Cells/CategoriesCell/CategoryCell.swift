@@ -69,11 +69,11 @@ class CategoryCell: UICollectionViewCell {
         categoryCollectionView.register(CategoryHeaderView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: CategoryHeaderView.identifier)
     }
     private func createLayout() -> UICollectionViewLayout {
-        let itemSize = NSCollectionLayoutSize(widthDimension: .absolute(108),
+        let itemSize = NSCollectionLayoutSize(widthDimension: .absolute(116),
                                               heightDimension: .absolute(119))
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
         item.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 4, bottom: 0, trailing: 4)
-        let groupSize = NSCollectionLayoutSize(widthDimension: .absolute(108),
+        let groupSize = NSCollectionLayoutSize(widthDimension: .absolute(116),
                                                heightDimension: .absolute(119))
         let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize,
                                                        subitems: [item])

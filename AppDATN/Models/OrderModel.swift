@@ -13,4 +13,8 @@ struct OrderModel: Decodable {
     let amount: Int?
     let status: String?
     var details : [OrderDetailModel]?
+    let address: String?
+    var formattedPrice: String {
+        return "\(FormatNumber.shared.formatter(total: amount ?? 0))"
+    }
 }

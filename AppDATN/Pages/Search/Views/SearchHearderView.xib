@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="662" height="131"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jGw-Ld-sxK">
+                    <rect key="frame" x="16" y="16" width="630" height="99"/>
+                    <subviews>
+                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Search" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lt5-kh-W2h">
+                            <rect key="frame" x="16" y="0.0" width="507" height="99"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="magnifyingglass" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="4qH-Gf-8lT">
+                            <rect key="frame" x="539" y="13" width="75" height="73.333333333333329"/>
+                            <color key="tintColor" systemColor="systemGray2Color"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="4qH-Gf-8lT" secondAttribute="height" id="9Bt-ug-rVH"/>
+                            </constraints>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="lt5-kh-W2h" secondAttribute="bottom" id="3sN-wN-JsX"/>
+                        <constraint firstItem="4qH-Gf-8lT" firstAttribute="leading" secondItem="lt5-kh-W2h" secondAttribute="trailing" constant="16" id="UG2-Cu-rXc"/>
+                        <constraint firstAttribute="trailing" secondItem="4qH-Gf-8lT" secondAttribute="trailing" constant="16" id="Y3c-ez-E8W"/>
+                        <constraint firstItem="4qH-Gf-8lT" firstAttribute="top" secondItem="jGw-Ld-sxK" secondAttribute="top" constant="12" id="bdq-Yo-FUN"/>
+                        <constraint firstItem="lt5-kh-W2h" firstAttribute="leading" secondItem="jGw-Ld-sxK" secondAttribute="leading" constant="16" id="gRY-BV-rhp"/>
+                        <constraint firstItem="lt5-kh-W2h" firstAttribute="top" secondItem="jGw-Ld-sxK" secondAttribute="top" id="izK-CW-h82"/>
+                        <constraint firstAttribute="bottom" secondItem="4qH-Gf-8lT" secondAttribute="bottom" constant="12" id="vfS-a7-531"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="jGw-Ld-sxK" secondAttribute="bottom" constant="16" id="6NW-ZN-Rse"/>
+                <constraint firstItem="jGw-Ld-sxK" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="APx-zM-ETl"/>
+                <constraint firstAttribute="trailing" secondItem="jGw-Ld-sxK" secondAttribute="trailing" constant="16" id="F7b-PX-Eve"/>
+                <constraint firstItem="jGw-Ld-sxK" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="16" id="Mwi-gD-0ca"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="180.15267175572518" y="-233.45070422535213"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="magnifyingglass" catalog="system" width="128" height="117"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

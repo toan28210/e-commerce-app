@@ -82,7 +82,7 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="pHI-6H-P9n" firstAttribute="top" secondItem="ggP-Bu-2ps" secondAttribute="top" constant="8" id="0pe-3w-gzL"/>
                             <constraint firstItem="B0p-qI-yML" firstAttribute="top" secondItem="ggP-Bu-2ps" secondAttribute="top" id="12Q-jO-Blb"/>
@@ -104,11 +104,19 @@
                             <constraint firstAttribute="bottom" secondItem="1tc-Jf-MlT" secondAttribute="bottom" id="vof-ix-wEC"/>
                             <constraint firstItem="1XT-jt-XJE" firstAttribute="leading" secondItem="xf8-JT-jN3" secondAttribute="leading" id="xlb-em-Pm0"/>
                         </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="borderWith">
+                                <real key="value" value="1"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                <color key="value" red="0.8666666666666667" green="0.8666666666666667" blue="0.8666666666666667" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </view>
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
-            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="ggP-Bu-2ps" secondAttribute="bottom" id="EBL-O4-HPu"/>
                 <constraint firstItem="ggP-Bu-2ps" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="JwQ-qh-9V5"/>
@@ -122,7 +130,7 @@
                 <outlet property="productName" destination="xf8-JT-jN3" id="FGl-fi-Cxj"/>
                 <outlet property="productPrice" destination="1XT-jt-XJE" id="M7J-Wj-Jof"/>
             </connections>
-            <point key="canvasLocation" x="333.58778625954199" y="115.84507042253522"/>
+            <point key="canvasLocation" x="295" y="2"/>
         </collectionViewCell>
     </objects>
     <resources>

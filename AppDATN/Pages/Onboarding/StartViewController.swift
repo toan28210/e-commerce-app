@@ -16,9 +16,9 @@ class StartViewController: UIViewController {
         didSet {
             startPageControl.currentPage = currentPage
             if currentPage == startDatas.count - 1 {
-                startButton.setTitle("Get start", for: .normal)
+                startButton.setTitle("Bắt đầu", for: .normal)
             } else {
-                startButton.setTitle("Next", for: .normal)
+                startButton.setTitle("Tiếp", for: .normal)
             }
         }
     }
@@ -37,8 +37,8 @@ class StartViewController: UIViewController {
     @IBAction func handleClickGetStart(_ sender: UIButton) {
         if currentPage == startDatas.count - 1 {
             let welcome = WelcomeViewController()
-            self.present(welcome, animated: true)
-            UserDefaults.standard.hasOnboarded = true
+            welcome.navigationController?.isNavigationBarHidden = true
+            self.navigationController?.pushViewController(welcome, animated: true)
         } else {
             currentPage += 1
             scrollToSlideIndex(slideIndex: currentPage)

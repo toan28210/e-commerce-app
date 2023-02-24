@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PayViewController" customModule="AppDATN" customModuleProvider="target">
+            <connections>
+                <outlet property="payButton" destination="oOr-sg-wYB" id="Z1A-Qt-Eke"/>
+                <outlet property="tableView" destination="Jpu-vY-PhS" id="Aes-Qo-zqP"/>
+                <outlet property="totalPrice" destination="els-Bi-6ET" id="xXE-dv-k4D"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OKg-H3-K8i">
+                    <rect key="frame" x="0.0" y="812" width="393" height="40"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oOr-sg-wYB">
+                            <rect key="frame" x="280" y="0.0" width="113" height="40"/>
+                            <color key="backgroundColor" systemColor="systemRedColor"/>
+                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                            <inset key="contentEdgeInsets" minX="24" minY="0.0" maxX="24" maxY="0.0"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" title="Đặt hàng">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <connections>
+                                <action selector="payPressed:" destination="-1" eventType="touchUpInside" id="tdc-h0-SHF"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tổng thanh toán" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pv2-sq-cbm">
+                            <rect key="frame" x="173.33333333333334" y="0.0" width="98.666666666666657" height="15.666666666666666"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <color key="textColor" systemColor="systemGray2Color"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="đ140.500" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="els-Bi-6ET">
+                            <rect key="frame" x="194.66666666666666" y="15.666666666666629" width="81.333333333333343" height="21"/>
+                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                            <color key="textColor" systemColor="systemRedColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="Pv2-sq-cbm" firstAttribute="top" secondItem="OKg-H3-K8i" secondAttribute="top" id="3Xe-3t-XJl"/>
+                        <constraint firstItem="els-Bi-6ET" firstAttribute="top" secondItem="Pv2-sq-cbm" secondAttribute="bottom" id="8BO-VN-gbX"/>
+                        <constraint firstAttribute="height" constant="40" id="US4-NW-ymm"/>
+                        <constraint firstAttribute="bottom" secondItem="oOr-sg-wYB" secondAttribute="bottom" id="WCX-HZ-sRT"/>
+                        <constraint firstItem="oOr-sg-wYB" firstAttribute="top" secondItem="OKg-H3-K8i" secondAttribute="top" id="Z3f-1o-sYE"/>
+                        <constraint firstAttribute="trailing" secondItem="oOr-sg-wYB" secondAttribute="trailing" id="kqJ-Il-94c"/>
+                        <constraint firstItem="oOr-sg-wYB" firstAttribute="leading" secondItem="els-Bi-6ET" secondAttribute="trailing" constant="4" id="ny6-Q2-2j1"/>
+                        <constraint firstItem="oOr-sg-wYB" firstAttribute="leading" secondItem="Pv2-sq-cbm" secondAttribute="trailing" constant="8" id="shW-VK-ydV"/>
+                    </constraints>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Jpu-vY-PhS">
+                    <rect key="frame" x="0.0" y="0.0" width="393" height="812"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </tableView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="OKg-H3-K8i" firstAttribute="top" secondItem="Jpu-vY-PhS" secondAttribute="bottom" id="Ako-OI-KJX"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="OKg-H3-K8i" secondAttribute="trailing" id="aBf-3R-kiJ"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="OKg-H3-K8i" secondAttribute="bottom" id="kCI-a7-5fD"/>
+                <constraint firstItem="Jpu-vY-PhS" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="kcO-9U-fPT"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Jpu-vY-PhS" secondAttribute="trailing" id="lny-Zc-6H0"/>
+                <constraint firstItem="Jpu-vY-PhS" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="sid-ZD-UFl"/>
+                <constraint firstItem="OKg-H3-K8i" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="wDy-4H-B7q"/>
+            </constraints>
+            <point key="canvasLocation" x="-24" y="21"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

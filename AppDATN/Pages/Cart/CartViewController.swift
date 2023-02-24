@@ -16,30 +16,38 @@ class CartViewController: UIViewController {
     lazy var carts: [CartModel] = []
     lazy var total = 0
     var products: [Products] = []
+    private let viewModel = CartViewModel()
     override func viewDidLoad() {
         super.viewDidLoad()
         configureTableView()
         fetchDataCart()
+        setupNav()
+    }
+    
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        fetchDataCart()
+        setupNav()
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        setupNavigation()
-    }
-    func setupNavigation() {
-        title = "Shopping Cart"
-        navigationController?.isNavigationBarHidden = false
-        tabBarController?.tabBar.isHidden = true
-        navigationController?.navigationBar.backgroundColor = .white
-        let appearance = UINavigationBarAppearance()
-        appearance.backgroundColor = .white
-        appearance.titleTextAttributes = [.foregroundColor: UIColor.black]
-        appearance.largeTitleTextAttributes = [.foregroundColor: UIColor.black]
+        setupNav()
         
-        navigationController?.navigationBar.tintColor = .black
-        navigationController?.navigationBar.standardAppearance = appearance
-        navigationController?.navigationBar.compactAppearance = appearance
-        navigationController?.navigationBar.scrollEdgeAppearance = appearance
     }
+//    override func viewDidDisappear(_ animated: Bool) {
+//        super.viewDidDisappear(animated)
+//        self.navigationController?.isNavigationBarHidden = true
+//    }
+    func setupNav() {
+        let yourBackImage = UIImage(named: "img-back-image")
+        self.navigationController?.navigationBar.backIndicatorImage = yourBackImage
+        self.navigationController?.navigationBar.backIndicatorTransitionMaskImage = yourBackImage
+        self.navigationController?.navigationBar.backItem?.title = ""
+        self.title = "Giỏ hàng"
+        self.navigationController?.isNavigationBarHidden = false
+    }
+    
     func checkItemCart() {
         if carts.count == 0 {
             showCartEmpty.isHidden = false
@@ -50,48 +58,25 @@ class CartViewController: UIViewController {
         }
     }
     @IBAction func startPressed(_ sender: UIButton) {
-        let home = HomeViewController()
-        navigationController?.pushViewController(home, animated: true)
+        let home = TabbarController.shared.tabbar()
+        home.navigationController?.isNavigationBarHidden = true
+        self.navigationController?.pushViewController(home, animated: false)
     }
     @IBAction func checkoutPressed(_ sender: UIButton) {
-        let userId = UserDefaults.standard.value(forKey: "userid") ?? ""
-        let url = URL(string: "http://localhost:5000/api/orders")!
-        var request = URLRequest(url: url)
-        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
-        request.httpMethod = "POST"
-        let params: [String: Any] = [
-            "userId": userId,
-            "amount": total
-        ]
-        let bodyData = try? JSONSerialization.data(withJSONObject: params, options: [])
-        request.httpBody = bodyData
-        let task = URLSession.shared.dataTask(with: request) { data, res, error in
-            if error != nil || data == nil {
-                    print("Client error!")
-                    return
-                }
-                guard let response = res as? HTTPURLResponse, (200...299).contains(response.statusCode) else {
-                    print("Server error!")
-                    return
-                }
-                guard let mime = response.mimeType, mime == "application/json" else {
-                    print("Wrong MIME type!")
-                    return
-                }
-                do {
-                    guard let data = data else {
-                        return
-                    }
-                    let jsonDecoder = JSONDecoder()
-                    let json = try jsonDecoder.decode(OrderModel.self, from: data)
-                    for cart in self.carts {
-                        self.insertOrderDetail(otherId: json._id ?? "", productId: cart.productId ?? "", quantity: cart.quantity ?? 0)
-                    }
-                } catch {
-                    print("JSON error: \(error.localizedDescription)")
-                }
-        }
-        task.resume()
+        let payVC = PayViewController(carts: carts, total: total)
+        self.navigationController?.pushViewController(payVC, animated: true)
+//        guard let userId = UserDefaults.standard.value(forKey: "userid") as? String else {return}
+//        viewModel.checkOut(userId: userId, total: total, carts: carts) { [weak self] result in
+//            guard let strongSelf = self else {return}
+//            switch result {
+//            case .success(let order):
+//                for cart in strongSelf.carts {
+//                    strongSelf.insertOrderDetail(otherId: order._id ?? "", productId: cart.productId ?? "", quantity: cart.quantity ?? 0)
+//                }
+//            case .failure(let error):
+//                print(error)
+//            }
+//        }
     }
     @objc func handleBack(_ sender: UIButton) {
         navigationController?.dismiss(animated: true)
@@ -106,28 +91,15 @@ extension CartViewController {
         
     }
     func deleteItemCart(cartId: String) {
-        let url = URL(string: "http://localhost:5000/api/cart/\(cartId)")!
-        var request = URLRequest(url: url)
-        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
-        request.httpMethod = "DELETE"
-        let task = URLSession.shared.dataTask(with: request) { data, res, error in
-            if error != nil || data == nil {
-                    print("Client error!")
-                    return
+        viewModel.deleteItem(cartId: cartId) { [weak self] isSuccess in
+            guard let strongSelf = self else {return}
+            if isSuccess {
+                print(cartId)
+                DispatchQueue.main.async {
+                    strongSelf.fetchDataCart()
                 }
-                guard let response = res as? HTTPURLResponse, (200...299).contains(response.statusCode) else {
-                    print("Server error!")
-                    return
-                }
-                guard let mime = response.mimeType, mime == "application/json" else {
-                    print("Wrong MIME type!")
-                    return
-                }
-            if let _ = data {
-                self.fetchDataCart()
             }
         }
-        task.resume()
     }
 }
 
@@ -174,78 +146,33 @@ extension CartViewController: UITableViewDataSource {
 
 extension CartViewController {
     func deleteAllCart() {
-        let userId = UserDefaults.standard.value(forKey: "userid") ?? ""
-        let url = URL(string: "http://localhost:5000/api/cart/\(userId)")!
-        var request = URLRequest(url: url)
-        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
-        request.httpMethod = "DELETE"
-        let task = URLSession.shared.dataTask(with: request) { data, res, error in
-            if error != nil || data == nil {
-                    print("Client error!")
-                    return
-                }
-                guard let response = res as? HTTPURLResponse, (200...299).contains(response.statusCode) else {
-                    print("Server error!")
-                    return
-                }
-                guard let mime = response.mimeType, mime == "application/json" else {
-                    print("Wrong MIME type!")
-                    return
-                }
-                do {
-                    guard let data = data else {
-                        return
-                    }
-                    print("thanh cong")
-                    self.carts = []
-                    DispatchQueue.main.async {
-                        self.checkItemCart()
-                        self.tableView.reloadData()
-                    }
-                } catch {
-                    print("JSON error: \(error.localizedDescription)")
-                }
+        guard let userId = UserDefaults.standard.value(forKey: "userid") as? String else {return}
+        viewModel.deleteAllCart(userId: userId) { [weak self] isSuccess in
+            guard let strongSelf = self else {return}
+            if isSuccess {
+                strongSelf.carts = []
+                strongSelf.tableView.reloadData()
+                strongSelf.checkItemCart()
+            }
         }
-        task.resume()
     }
     func fetchDataCart() {
-        let userId = UserDefaults.standard.value(forKey: "userid") ?? ""
-        let url = URL(string: "http://localhost:5000/api/cart/find/\(userId)")!
-        var request = URLRequest(url: url)
-        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
-        request.httpMethod = "GET"
-        let task = URLSession.shared.dataTask(with: request) { data, res, error in
-            if error != nil || data == nil {
-                    print("Client error!")
-                    return
-                }
-                guard let response = res as? HTTPURLResponse, (200...299).contains(response.statusCode) else {
-                    print("Server error!")
-                    return
-                }
-                guard let mime = response.mimeType, mime == "application/json" else {
-                    print("Wrong MIME type!")
-                    return
-                }
-                do {
-                    guard let data = data else {
-                        return
-                    }
-                    let jsonDecoder = JSONDecoder()
-                    let json = try jsonDecoder.decode([CartModel].self, from: data)
-                    self.carts = json
-                    self.total = 0
-                    DispatchQueue.main.sync {
-                        self.tableView.reloadData()
-                        self.checkItemCart()
-                    }
-
-                } catch {
-                    print("JSON error: \(error.localizedDescription)")
-                }
+        guard let userId = UserDefaults.standard.value(forKey: "userid") as? String else {return}
+        viewModel.fetchDataCart(userId: userId) { [weak self] result in
+            guard let strongSelf = self else {return}
+            switch result {
+            case .success(let carts):
+                strongSelf.total = 0
+                strongSelf.carts = carts
+                strongSelf.tableView.reloadData()
+                strongSelf.checkItemCart()
+            case .failure(let error):
+                print(error)
+            }
         }
-        task.resume()
     }
+    
+
 }
 
 extension CartViewController: CartCellDelegate {
@@ -295,42 +222,16 @@ extension CartViewController: CartCellDelegate {
 
 extension CartViewController {
     func insertOrderDetail(otherId: String, productId: String, quantity: Int) {
-        let url = URL(string: "http://localhost:5000/api/orderdetails")!
-        var request = URLRequest(url: url)
-        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
-        request.httpMethod = "POST"
-        let params: [String: Any] = [
-            "orderId": otherId,
-            "productId": productId,
-            "quantity": quantity
-        ]
-        let bodyData = try? JSONSerialization.data(withJSONObject: params, options: [])
-        request.httpBody = bodyData
-        let task = URLSession.shared.dataTask(with: request) { data, res, error in
-            if error != nil || data == nil {
-                    print("Client error!")
-                    return
-                }
-                guard let response = res as? HTTPURLResponse, (200...299).contains(response.statusCode) else {
-                    print("Server error!")
-                    return
-                }
-                guard let mime = response.mimeType, mime == "application/json" else {
-                    print("Wrong MIME type!")
-                    return
-                }
-                do {
-                    guard let data = data else {
-                        return
-                    }
-                    let jsonDecoder = JSONDecoder()
-                    let _ = try jsonDecoder.decode(CartModel.self, from: data)
-                    self.deleteAllCart()
-
-                } catch {
-                    print("JSON error: \(error.localizedDescription)")
-                }
+        viewModel.addOrderDetail(orderId: otherId,
+                                 productId: productId,
+                                 quantity: quantity) { [weak self] result in
+            guard let strongSelf = self else {return}
+            switch result {
+            case .success(_):
+                strongSelf.deleteAllCart()
+            case .failure(let error):
+                print(error)
+            }
         }
-        task.resume()
     }
 }

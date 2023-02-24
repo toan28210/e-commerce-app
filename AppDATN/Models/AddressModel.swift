@@ -9,11 +9,10 @@ import Foundation
 
 struct AddressModel: Decodable {
     let _id: String?
+    let userId: String?
     let name: String?
-    let email: String?
     let phone: Int?
+    let addressStreet: String?
     let address: String?
-    let zipcode: String?
-    let city: String?
-    let country: String?
+    let isdefault: Bool?
 }

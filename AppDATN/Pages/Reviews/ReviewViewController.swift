@@ -20,13 +20,19 @@ class ReviewViewController: UIViewController {
     }()
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Add", style: .plain, target: self, action: #selector(addTapped))
-        title = "Reviews"
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addTapped))
+        title = "Đánh giá sản phẩm"
         tabBarController?.tabBar.isHidden = true
         configureColelctionView()
         registerCell()
         fetchRating()
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        fetchRating()
+    }
+    
     func fetchRating() {
         let url = URL(string: "http://localhost:5000/api/rating/find/\(productId)")!
         var request = URLRequest(url: url)
